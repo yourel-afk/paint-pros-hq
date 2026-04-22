@@ -9,38 +9,161 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ThreeStageRouteImport } from './routes/three-stage'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LocationsIndexRouteImport } from './routes/locations.index'
+import { Route as LocationsRegionIndexRouteImport } from './routes/locations.$region.index'
+import { Route as LocationsRegionSuburbRouteImport } from './routes/locations.$region.$suburb'
 
+const ThreeStageRoute = ThreeStageRouteImport.update({
+  id: '/three-stage',
+  path: '/three-stage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocationsIndexRoute = LocationsIndexRouteImport.update({
+  id: '/locations/',
+  path: '/locations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsRegionIndexRoute = LocationsRegionIndexRouteImport.update({
+  id: '/locations/$region/',
+  path: '/locations/$region/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsRegionSuburbRoute = LocationsRegionSuburbRouteImport.update({
+  id: '/locations/$region/$suburb',
+  path: '/locations/$region/$suburb',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/three-stage': typeof ThreeStageRoute
+  '/locations/': typeof LocationsIndexRoute
+  '/locations/$region/$suburb': typeof LocationsRegionSuburbRoute
+  '/locations/$region/': typeof LocationsRegionIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/three-stage': typeof ThreeStageRoute
+  '/locations': typeof LocationsIndexRoute
+  '/locations/$region/$suburb': typeof LocationsRegionSuburbRoute
+  '/locations/$region': typeof LocationsRegionIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/services': typeof ServicesRoute
+  '/three-stage': typeof ThreeStageRoute
+  '/locations/': typeof LocationsIndexRoute
+  '/locations/$region/$suburb': typeof LocationsRegionSuburbRoute
+  '/locations/$region/': typeof LocationsRegionIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/three-stage'
+    | '/locations/'
+    | '/locations/$region/$suburb'
+    | '/locations/$region/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/three-stage'
+    | '/locations'
+    | '/locations/$region/$suburb'
+    | '/locations/$region'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/services'
+    | '/three-stage'
+    | '/locations/'
+    | '/locations/$region/$suburb'
+    | '/locations/$region/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  ServicesRoute: typeof ServicesRoute
+  ThreeStageRoute: typeof ThreeStageRoute
+  LocationsIndexRoute: typeof LocationsIndexRoute
+  LocationsRegionSuburbRoute: typeof LocationsRegionSuburbRoute
+  LocationsRegionIndexRoute: typeof LocationsRegionIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/three-stage': {
+      id: '/three-stage'
+      path: '/three-stage'
+      fullPath: '/three-stage'
+      preLoaderRoute: typeof ThreeStageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,12 +171,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/locations/': {
+      id: '/locations/'
+      path: '/locations'
+      fullPath: '/locations/'
+      preLoaderRoute: typeof LocationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/$region/': {
+      id: '/locations/$region/'
+      path: '/locations/$region'
+      fullPath: '/locations/$region/'
+      preLoaderRoute: typeof LocationsRegionIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations/$region/$suburb': {
+      id: '/locations/$region/$suburb'
+      path: '/locations/$region/$suburb'
+      fullPath: '/locations/$region/$suburb'
+      preLoaderRoute: typeof LocationsRegionSuburbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  ServicesRoute: ServicesRoute,
+  ThreeStageRoute: ThreeStageRoute,
+  LocationsIndexRoute: LocationsIndexRoute,
+  LocationsRegionSuburbRoute: LocationsRegionSuburbRoute,
+  LocationsRegionIndexRoute: LocationsRegionIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
