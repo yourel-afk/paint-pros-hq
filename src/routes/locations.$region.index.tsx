@@ -73,7 +73,7 @@ function RegionPage() {
           Master painters dispatched directly to your suburb.
         </h2>
         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
-          {region.suburbs.map((s) => (
+          {region.suburbs.map((s: string) => (
             <Link
               key={s}
               to="/locations/$region/$suburb"

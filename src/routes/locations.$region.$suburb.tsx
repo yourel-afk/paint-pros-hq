@@ -66,7 +66,7 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
 
 function SuburbPage() {
   const { region, suburb } = Route.useLoaderData();
-  const nearby = region.suburbs.filter((s) => s !== suburb).slice(0, 8);
+  const nearby = region.suburbs.filter((s: string) => s !== suburb).slice(0, 8);
 
   return (
     <SiteLayout>
@@ -159,7 +159,7 @@ function SuburbPage() {
         <Eyebrow>Also Servicing in {region.name}</Eyebrow>
         <h2 className="text-3xl lg:text-4xl font-bold">Nearby suburbs from Mitcham HQ</h2>
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 border border-white/10">
-          {nearby.map((s) => (
+          {nearby.map((s: string) => (
             <Link
               key={s}
               to="/locations/$region/$suburb"
