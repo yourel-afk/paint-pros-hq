@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLayout";
 import { TrustBar } from "@/components/site/TrustBar";
+import { ThreeStage } from "@/components/site/ThreeStage";
 import { Brush, Home, Building2, Palette, Droplets, Trees } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
@@ -47,7 +48,11 @@ function ServicesPage() {
       <TrustBar />
 
       <Section>
-        <div className="grid gap-px bg-white/10" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
+        <Eyebrow>Service Disciplines</Eyebrow>
+        <h2 className="text-4xl lg:text-5xl font-bold max-w-3xl">
+          The six disciplines of a Painter Melbourne master crew.
+        </h2>
+        <div className="mt-12 grid gap-px bg-white/10" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
           {SERVICES.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="bg-background p-10">
               <Icon className="h-10 w-10" style={{ color: "var(--gold)" }} />
@@ -56,6 +61,10 @@ function ServicesPage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      <Section className="border-t border-white/10">
+        <ThreeStage />
         <CTABlock />
       </Section>
     </SiteLayout>
