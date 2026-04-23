@@ -4,6 +4,7 @@ import { TrustBar } from "@/components/site/TrustBar";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { Brush, Home, Building2, Palette, Droplets, Trees } from "lucide-react";
 import { BUSINESS } from "@/data/business";
+import { NoSubbies } from "@/components/site/NoSubbies";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -26,12 +27,42 @@ export const Route = createFileRoute("/services")({
 });
 
 const SERVICES = [
-  { icon: Home, title: "Interior Masterworks", desc: "Whole-home repaints, feature walls, ceilings and trim — executed with dustless sanding systems and brand-grade Dulux finishes." },
-  { icon: Building2, title: "Exterior Estate Painting", desc: "Render, weatherboard, brick and cement-sheet — sealed against Melbourne's four-season cycle with multi-coat elastomeric builds." },
-  { icon: Palette, title: "Heritage & Period Restoration", desc: "Period-correct colour matching, lead-safe preparation and conservation-grade products for Victorian, Edwardian and Art Deco facades." },
-  { icon: Droplets, title: "Coastal Defense Systems", desc: "Marine-grade elastomeric membranes and UV-reflective topcoats for Bayside salt-spray and humidity exposure." },
-  { icon: Trees, title: "Bushland & BAL Coatings", desc: "Fire-rated systems and timber preservation for Eastern hills properties in BAL-12.5 to BAL-29 zones." },
-  { icon: Brush, title: "Specialty Finishes", desc: "Limewash, Venetian plaster, micro-cement and bespoke architectural finishes for design-led residences." },
+  {
+    icon: Home,
+    title: "Interior Repaints",
+    desc:
+      "Whole-home interiors done properly: walls patched and gapped, trim sanded back with Festool dustless gear, ceilings rolled flat, doors and architraves cut in by hand. Two coats of premium top coats — Dulux Wash&Wear or Aquanamel on the trim — laid wet-edge so there's no lap marks under the lounge-room downlights.",
+  },
+  {
+    icon: Building2,
+    title: "Exterior Repaints",
+    desc:
+      "Render, weatherboard, brick, fibro and Hardie sheet. We pressure-wash, scrape, sand back to a sound substrate, spot-prime the bare timber and rusted fixings, fill every gap and split, then lay down two coats of Dulux Weathershield — back rolled after spray so the film actually bonds. Built to outlast Melbourne's four-season punishment.",
+  },
+  {
+    icon: Palette,
+    title: "Heritage & Period Restoration",
+    desc:
+      "Victorian, Edwardian and Art Deco facades restored — not just repainted. Lead-safe scrape and containment on pre-1970 paintwork, conservation-grade fillers on damaged ornament, period-correct colour matching to council overlay requirements, and a sashed brush on every cornice and finial. Heritage permits respected; original detail preserved.",
+  },
+  {
+    icon: Droplets,
+    title: "Coastal Defense Systems",
+    desc:
+      "Bayside-grade builds for properties taking the salt spray, onshore winds and reflected UV off Port Phillip. Marine-grade elastomeric membrane primer, two coats of UV-stable Weathershield top coat, sealed gap-and-fill on every joint. We pre-treat rust on every nail head and fitting — because that's where coastal failures actually start.",
+  },
+  {
+    icon: Trees,
+    title: "Bushland & BAL Coatings",
+    desc:
+      "Eastern hills properties in BAL-12.5 to BAL-29 zones get fire-rated systems on eaves, decks and timber cladding. Penetrating timber preservers underneath, decking oils that breathe, and CSIRO-tested intumescent systems where the BAL rating demands it. Every coat applied to spec — your insurer's spec, not ours.",
+  },
+  {
+    icon: Brush,
+    title: "Specialty Finishes",
+    desc:
+      "Limewash on heritage brickwork, Venetian plaster on feature walls, micro-cement in wet areas, and bespoke architectural finishes for design-led builds. Hand-trowelled by the same in-house crew that runs the everyday work — no specialist subbies parachuted in for one wall.",
+  },
 ];
 
 function ServicesPage() {
@@ -40,20 +71,23 @@ function ServicesPage() {
       <Section>
         <Eyebrow>Service Catalogue</Eyebrow>
         <h1 className="text-5xl lg:text-7xl font-extrabold max-w-4xl tracking-tight">
-          Six disciplines. One <span style={{ color: "var(--gold)" }}>master crew.</span>
+          Six trades. One <span style={{ color: "var(--gold)" }}>in-house crew.</span>
         </h1>
-        <p className="mt-8 text-lg text-foreground/75 max-w-2xl">
-          Every service below is delivered exclusively by Painter Melbourne employees — never subcontractors. Crews are dispatched from our Mitcham HQ with the climate-correct system pre-specified for your property.
+        <p className="mt-8 text-lg text-foreground/85 max-w-3xl leading-relaxed">
+          We don't just paint your house — we restore the surface first, then we paint it. Every service below is delivered by Painter Melbourne employees, dispatched from Mitcham HQ with the climate-correct system already specced for your property. <span className="text-foreground">No subbies. No shortcuts.</span>
         </p>
       </Section>
 
       <TrustBar />
 
       <Section>
-        <Eyebrow>Service Disciplines</Eyebrow>
+        <Eyebrow>What We Actually Do On Site</Eyebrow>
         <h2 className="text-4xl lg:text-5xl font-bold max-w-3xl">
-          The six disciplines of a Painter Melbourne master crew.
+          Surfaces restored, then top-coated. <span style={{ color: "var(--gold)" }}>In that order.</span>
         </h2>
+        <p className="mt-4 text-foreground/70 max-w-2xl">
+          70% of every job is the grunt work — patching, gapping, sanding, priming. The paint is the easy bit.
+        </p>
         <div className="mt-12 grid gap-px bg-white/10" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
           {SERVICES.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="bg-background p-10">
@@ -63,6 +97,10 @@ function ServicesPage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      <Section className="border-t border-white/10">
+        <NoSubbies />
       </Section>
 
       <Section className="border-t border-white/10">

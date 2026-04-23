@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLayout";
 import { TrustBar } from "@/components/site/TrustBar";
 import { BUSINESS } from "@/data/business";
+import { NoSubbies } from "@/components/site/NoSubbies";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -25,18 +26,21 @@ function AboutPage() {
       <Section>
         <Eyebrow>About Painter Melbourne</Eyebrow>
         <h1 className="text-5xl lg:text-7xl font-extrabold max-w-4xl tracking-tight">
-          A purpose-built HQ. A single crew. <span style={{ color: "var(--gold)" }}>Zero compromises.</span>
+          One crew. One HQ. <span style={{ color: "var(--gold)" }}>No subbies.</span>
         </h1>
         <div className="mt-12 grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7 space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
-              Painter Melbourne was founded on a single conviction: the highest tier of residential painting in Melbourne could not be delivered by a network of subcontractors. It required a permanent crew, a permanent HQ, and a permanent standard.
+              Painter Melbourne started for one reason: the top end of Melbourne residential work was being subcontracted to whoever could turn up cheapest, and the finish was showing it. Heritage trim being whipped over with one coat. Coastal facades flashing inside two summers. Clients chasing callbacks that nobody owned.
             </p>
             <p>
-              From our purpose-built headquarters in Mitcham, we dispatch employees — not contractors — to projects across the Bayside, Inner South-East, South-East Growth and Eastern corridors. Every painter on site has been trained on our Three-Stage Excellence Method and is personally accountable to the 10-Year Masterpiece Guarantee.
+              So we built it the other way. A permanent depot in Mitcham. A permanent crew on the books — employees, not labour-hire, not subbies. The same painters you meet on quote day are the painters cutting in your cornices three weeks later.
             </p>
             <p>
-              We are Dulux Accredited, VBA Licensed, and carry $20M public liability — but those are baselines. The real differentiator is what happens between Diagnostic Prep and Signature Handover: the patient, repeatable craft of a master painter at work.
+              We spend 70% of our time on prep — patching, gapping, dustless sanding with Festool gear, sugar-soap wash-down, spot priming — because that's where the 10-year guarantee actually comes from. The premium top coats are the easy part. Anyone can roll Dulux. Not everyone earns the surface underneath it.
+            </p>
+            <p>
+              Yes, we're Dulux Accredited, VBA Licensed and carry $20M public liability. Those are the baseline. The real differentiator is the bloke standing on your scaffold at 7am — and the fact that he's the same bloke standing there at 5pm, three weeks later, walking the job with you under a torch.
             </p>
           </div>
           <div className="lg:col-span-5 border border-white/10 p-10 bg-[oklch(0.18_0_0)]">
@@ -59,6 +63,9 @@ function AboutPage() {
         </div>
       </Section>
       <TrustBar />
+      <Section className="border-t border-white/10">
+        <NoSubbies />
+      </Section>
       <Section>
         <CTABlock />
       </Section>
