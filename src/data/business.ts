@@ -5,8 +5,9 @@
 export const BUSINESS = {
   name: "Painter Melbourne",
   legalName: "Painter Melbourne Pty Ltd",
-  // TODO: Replace with the registered ABN once provided by the client.
-  abn: "ABN pending",
+  abn: "ABN 92 637 394 935",
+  legalDisclosure:
+    "Painter Melbourne is a registered business name of EL Painters (ABN: 92 637 394 935)",
   phoneDisplay: "0414 402 101",
   phoneE164: "+61414402101",
   phoneHref: "tel:+61414402101",

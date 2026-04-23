@@ -92,6 +92,12 @@ export function Footer() {
           </div>
           <div>{BUSINESS.guarantee}</div>
         </div>
+        <p
+          className="mt-4 text-[10px] leading-tight select-text"
+          style={{ color: "oklch(0.13 0 0)" }}
+        >
+          {BUSINESS.legalDisclosure}
+        </p>
       </div>
     </footer>
   );
