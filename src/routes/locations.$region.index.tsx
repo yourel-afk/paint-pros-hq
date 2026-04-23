@@ -78,7 +78,7 @@ function RegionPage() {
               key={s}
               to="/locations/$region/$suburb"
               params={{ region: region.id, suburb: slugify(s) }}
-              className="bg-background p-6 hover:bg-[oklch(0.20_0_0)] transition-colors"
+              className="bg-background p-6 min-h-[100px] hover:bg-[oklch(0.20_0_0)] transition-colors block"
             >
               <div className="label-caps text-foreground/55">Painter</div>
               <div className="mt-2 text-lg font-semibold">{s}</div>

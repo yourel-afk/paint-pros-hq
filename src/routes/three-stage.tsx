@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, Section, CTABlock } from "@/components/site/SiteLayout";
+import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLayout";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { TrustBar } from "@/components/site/TrustBar";
 
@@ -19,6 +19,15 @@ export const Route = createFileRoute("/three-stage")({
   component: () => (
     <SiteLayout>
       <Section>
+        <Eyebrow>The Proprietary Protocol</Eyebrow>
+        <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
+          The <span style={{ color: "var(--gold)" }}>Three-Stage Excellence</span> Method.
+        </h1>
+        <p className="mt-6 text-lg text-foreground/75 max-w-2xl">
+          Every Painter Melbourne project — from a Brighton heritage facade to a Mitcham new-build — moves through the same proprietary three-stage protocol, executed exclusively by our in-house master crew.
+        </p>
+      </Section>
+      <Section className="border-t border-white/10">
         <ThreeStage />
       </Section>
       <TrustBar />

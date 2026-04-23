@@ -4,6 +4,8 @@ import { TrustBar } from "@/components/site/TrustBar";
 import { MitchamLogistics } from "@/components/site/MitchamLogistics";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { findRegion, findSuburb, slugify } from "@/data/suburbs";
+import { BUSINESS } from "@/data/business";
+import { MitchamFlagship } from "@/components/site/MitchamFlagship";
 
 export const Route = createFileRoute("/locations/$region/$suburb")({
   loader: ({ params }) => {
@@ -35,13 +37,17 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
             serviceType: "High-end residential painting",
             provider: {
               "@type": "LocalBusiness",
-              name: "Painter Melbourne",
+              name: BUSINESS.name,
+              telephone: BUSINESS.phoneE164,
+              email: BUSINESS.email,
+              url: BUSINESS.url,
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Mitcham",
-                addressRegion: "VIC",
-                postalCode: "3132",
-                addressCountry: "AU",
+                streetAddress: BUSINESS.street,
+                addressLocality: BUSINESS.locality,
+                addressRegion: BUSINESS.region,
+                postalCode: BUSINESS.postcode,
+                addressCountry: BUSINESS.country,
               },
             },
             areaServed: { "@type": "City", name: `${suburb}, Melbourne` },
@@ -66,7 +72,10 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
 
 function SuburbPage() {
   const { region, suburb } = Route.useLoaderData();
+  const isHQ = region.id === "eastern-hills" && suburb === "Mitcham";
   const nearby = region.suburbs.filter((s: string) => s !== suburb).slice(0, 8);
+
+  if (isHQ) return <MitchamFlagship />;
 
   return (
     <SiteLayout>
@@ -164,7 +173,7 @@ function SuburbPage() {
               key={s}
               to="/locations/$region/$suburb"
               params={{ region: region.id, suburb: slugify(s) }}
-              className="bg-background p-6 hover:bg-[oklch(0.20_0_0)] transition-colors"
+              className="bg-background p-6 min-h-[88px] hover:bg-[oklch(0.20_0_0)] transition-colors block"
             >
               <div className="label-caps text-foreground/55">Painter</div>
               <div className="mt-2 text-lg font-semibold">{s}</div>

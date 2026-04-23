@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow } from "@/components/site/SiteLayout";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
+import { BUSINESS } from "@/data/business";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -64,12 +65,12 @@ function ContactPage() {
             </button>
           </form>
 
-          <div className="lg:col-span-5 border border-white/10 bg-[oklch(0.18_0_0)] p-10 space-y-6">
-            <Info icon={<MapPin />} label="Mitcham HQ" value="Mitcham, VIC 3132" />
-            <Info icon={<Phone />} label="Phone" value="1300 PM PAINT" />
-            <Info icon={<Mail />} label="Email" value="quotes@paintermelbourne.com.au" />
-            <Info icon={<Clock />} label="Hours" value="Mon–Sat · 7am – 6pm" />
-          </div>
+          <address className="not-italic lg:col-span-5 border border-white/10 bg-[oklch(0.18_0_0)] p-10 space-y-6">
+            <Info icon={<MapPin />} label="Mitcham HQ" value={`${BUSINESS.locality}, ${BUSINESS.region} ${BUSINESS.postcode}`} />
+            <Info icon={<Phone />} label="Phone" value={BUSINESS.phoneDisplay} href={BUSINESS.phoneHref} />
+            <Info icon={<Mail />} label="Email" value={BUSINESS.email} href={BUSINESS.emailHref} />
+            <Info icon={<Clock />} label="Hours" value={BUSINESS.hours} />
+          </address>
         </div>
       </Section>
     </SiteLayout>
@@ -90,10 +91,10 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
   );
 }
 
-function Info({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
-  return (
-    <div className="flex gap-4 items-start">
-      <div className="h-10 w-10 grid place-items-center border border-white/10" style={{ color: "var(--gold)" }}>
+function Info({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: string; href?: string }) {
+  const inner = (
+    <div className="flex gap-4 items-start min-h-11">
+      <div className="h-11 w-11 grid place-items-center border border-white/10 shrink-0" style={{ color: "var(--gold)" }}>
         {icon}
       </div>
       <div>
@@ -101,5 +102,12 @@ function Info({ icon, label, value }: { icon: React.ReactNode; label: string; va
         <div className="mt-1 text-foreground">{value}</div>
       </div>
     </div>
+  );
+  return href ? (
+    <a href={href} className="block hover:text-gold transition-colors">
+      {inner}
+    </a>
+  ) : (
+    inner
   );
 }
