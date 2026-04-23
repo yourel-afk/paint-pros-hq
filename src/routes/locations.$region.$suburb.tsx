@@ -6,6 +6,8 @@ import { ThreeStage } from "@/components/site/ThreeStage";
 import { findRegion, findSuburb, slugify } from "@/data/suburbs";
 import { BUSINESS } from "@/data/business";
 import { MitchamFlagship } from "@/components/site/MitchamFlagship";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { breadcrumbSchema, suburbFaqSchema, nearestNeighbours } from "@/lib/schema";
 
 export const Route = createFileRoute("/locations/$region/$suburb")({
   loader: ({ params }) => {
@@ -54,6 +56,21 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
             description,
           }),
         },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Locations", url: "/locations" },
+              { name: region.name, url: `/locations/${region.id}` },
+              { name: suburb, url: `/locations/${region.id}/${slugify(suburb)}` },
+            ]),
+          ),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(suburbFaqSchema(suburb, region.name, region.tagline)),
+        },
       ],
     };
   },
@@ -73,7 +90,7 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
 function SuburbPage() {
   const { region, suburb } = Route.useLoaderData();
   const isHQ = region.id === "eastern-hills" && suburb === "Mitcham";
-  const nearby = region.suburbs.filter((s: string) => s !== suburb).slice(0, 8);
+  const nearby = nearestNeighbours(region.id, suburb, 5);
 
   if (isHQ) return <MitchamFlagship />;
 
@@ -93,13 +110,16 @@ function SuburbPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
         </div>
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-12 pt-20 pb-28 lg:pt-28 lg:pb-40">
-          <nav className="label-caps text-foreground/55 mb-6">
-            <Link to="/locations">Locations</Link>
-            <span className="mx-3">/</span>
-            <Link to="/locations/$region" params={{ region: region.id }}>{region.name}</Link>
-            <span className="mx-3">/</span>
-            <span className="text-foreground/85">{suburb}</span>
-          </nav>
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { label: "Home", to: "/" },
+                { label: "Locations", to: "/locations" },
+                { label: region.name, to: "/locations/$region", params: { region: region.id } },
+                { label: suburb },
+              ]}
+            />
+          </div>
           <div className="label-caps mb-4" style={{ color: "var(--gold)" }}>
             {region.tagline} · {suburb}
           </div>
@@ -165,9 +185,14 @@ function SuburbPage() {
 
       {/* Nearby */}
       <Section className="border-t border-white/10">
-        <Eyebrow>Also Servicing in {region.name}</Eyebrow>
-        <h2 className="text-3xl lg:text-4xl font-bold">Nearby suburbs from Mitcham HQ</h2>
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 border border-white/10">
+        <Eyebrow>Nearby Service Areas</Eyebrow>
+        <h2 className="text-3xl lg:text-4xl font-bold">
+          5 closest suburbs to {suburb}
+        </h2>
+        <p className="mt-4 text-foreground/70 max-w-2xl">
+          Mitcham HQ dispatches the same master crew across these neighbouring {region.name} suburbs — same day, same standard, same 10-Year Masterpiece Guarantee.
+        </p>
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-white/10 border border-white/10">
           {nearby.map((s: string) => (
             <Link
               key={s}
@@ -179,6 +204,16 @@ function SuburbPage() {
               <div className="mt-2 text-lg font-semibold">{s}</div>
             </Link>
           ))}
+        </div>
+        <div className="mt-8">
+          <Link
+            to="/locations/$region"
+            params={{ region: region.id }}
+            className="label-caps inline-flex items-center min-h-11"
+            style={{ color: "var(--gold)" }}
+          >
+            ← All {region.suburbs.length} {region.name} suburbs
+          </Link>
         </div>
         <CTABlock title={`Secure your ${suburb} property's finish.`} />
       </Section>

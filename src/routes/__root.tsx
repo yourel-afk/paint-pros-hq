@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { localBusinessSchema, servicesCatalogueSchema } from "@/lib/schema";
 
 function NotFoundComponent() {
   return (
@@ -45,6 +46,16 @@ export const Route = createRootRoute({
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(localBusinessSchema()),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(servicesCatalogueSchema()),
+      },
     ],
   }),
   shellComponent: RootShell,

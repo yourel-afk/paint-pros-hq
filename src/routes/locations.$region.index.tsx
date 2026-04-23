@@ -3,6 +3,8 @@ import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLa
 import { TrustBar } from "@/components/site/TrustBar";
 import { MitchamLogistics } from "@/components/site/MitchamLogistics";
 import { findRegion, slugify } from "@/data/suburbs";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const Route = createFileRoute("/locations/$region/")({
   loader: ({ params }) => {
@@ -22,6 +24,18 @@ export const Route = createFileRoute("/locations/$region/")({
         { property: "og:title", content: title },
         { property: "og:description", content: description },
         { property: "og:image", content: r.image },
+      ],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", url: "/" },
+              { name: "Locations", url: "/locations" },
+              { name: r.name, url: `/locations/${r.id}` },
+            ]),
+          ),
+        },
       ],
     };
   },
@@ -55,6 +69,15 @@ function RegionPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
         </div>
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-12 pt-24 pb-32 lg:pt-32 lg:pb-44">
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { label: "Home", to: "/" },
+                { label: "Locations", to: "/locations" },
+                { label: region.name },
+              ]}
+            />
+          </div>
           <div className="label-caps mb-6" style={{ color: "var(--gold)" }}>{region.tagline}</div>
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
             {region.name} Painters
