@@ -30,6 +30,12 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
         { property: "og:description", content: description },
         { property: "og:image", content: region.image },
       ],
+      links: [
+        {
+          rel: "canonical",
+          href: `${BUSINESS.url}/locations/${region.id}/${slugify(suburb)}`,
+        },
+      ],
       scripts: [
         {
           type: "application/ld+json",
@@ -124,7 +130,7 @@ function SuburbPage() {
             {region.tagline} · {suburb}
           </div>
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
-            Painter <span style={{ color: "var(--gold)" }}>{suburb}</span>
+            Master House Painters in <span style={{ color: "var(--gold)" }}>{suburb}</span>
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-foreground/85 max-w-2xl">
             High-end residential painting in {suburb}, delivered exclusively by Painter Melbourne's in-house master crew from our Mitcham HQ. Backed by the 10-Year Masterpiece Guarantee.
