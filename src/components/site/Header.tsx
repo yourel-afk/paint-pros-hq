@@ -116,6 +116,41 @@ export function Header() {
       {open && (
         <div className="lg:hidden border-t border-white/10 bg-background">
           <div className="flex flex-col gap-1 px-6 py-4">
+            <Link
+              to="/services"
+              onClick={() => setOpen(false)}
+              className="label-caps text-foreground/85 flex items-center min-h-12 border-b border-white/5"
+            >
+              Services
+            </Link>
+            <Link
+              to="/three-stage"
+              onClick={() => setOpen(false)}
+              className="label-caps text-foreground/85 flex items-center min-h-12 border-b border-white/5"
+            >
+              The Method
+            </Link>
+            <Link
+              to="/locations"
+              onClick={() => setOpen(false)}
+              className="label-caps text-foreground/85 flex items-center min-h-12 border-b border-white/5"
+            >
+              Locations · All 93 Suburbs
+            </Link>
+            <div className="grid grid-cols-2 gap-2 py-2 border-b border-white/5">
+              {REGIONS.map((r) => (
+                <Link
+                  key={r.id}
+                  to="/locations/$region"
+                  params={{ region: r.id }}
+                  onClick={() => setOpen(false)}
+                  className="text-xs label-caps text-foreground/65 flex items-center min-h-11 px-2"
+                  style={{ color: "var(--gold)" }}
+                >
+                  → {r.name} ({r.suburbs.length})
+                </Link>
+              ))}
+            </div>
             {NAV.map((item) => (
               <Link
                 key={item.to}
