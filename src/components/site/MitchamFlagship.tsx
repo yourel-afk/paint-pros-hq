@@ -19,7 +19,7 @@ export function MitchamFlagship() {
             title="Mitcham HQ — Painter Melbourne Headquarters"
             className="w-full h-full object-cover opacity-40"
             width={1600}
-            height={1000>
+            height={1000}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/75 to-background/40" />
         </div>
