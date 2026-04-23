@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLayout";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { TrustBar } from "@/components/site/TrustBar";
+import { BUSINESS } from "@/data/business";
 
 export const Route = createFileRoute("/three-stage")({
   head: () => ({
@@ -15,6 +16,7 @@ export const Route = createFileRoute("/three-stage")({
       { property: "og:title", content: "The Three-Stage Excellence Method" },
       { property: "og:description", content: "Painter Melbourne's proprietary protocol: Diagnostic Prep, Precision Application, Signature Handover." },
     ],
+    links: [{ rel: "canonical", href: `${BUSINESS.url}/three-stage` }],
   }),
   component: () => (
     <SiteLayout>

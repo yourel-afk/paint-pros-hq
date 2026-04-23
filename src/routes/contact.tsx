@@ -15,6 +15,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact — Painter Melbourne Mitcham HQ" },
       { property: "og:description", content: "Request your Mitcham HQ quote — 93 Melbourne suburbs covered." },
     ],
+    links: [{ rel: "canonical", href: `${BUSINESS.url}/contact` }],
   }),
   component: ContactPage,
 });

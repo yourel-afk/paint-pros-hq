@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLayout";
 import { TrustBar } from "@/components/site/TrustBar";
+import { BUSINESS } from "@/data/business";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -13,6 +14,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Painter Melbourne — Mitcham HQ" },
       { property: "og:description", content: "In-house master crew. Zero subcontractors. 10-year masterpiece guarantee." },
     ],
+    links: [{ rel: "canonical", href: `${BUSINESS.url}/about` }],
   }),
   component: AboutPage,
 });

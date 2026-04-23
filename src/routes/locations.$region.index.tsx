@@ -5,6 +5,7 @@ import { MitchamLogistics } from "@/components/site/MitchamLogistics";
 import { findRegion, slugify } from "@/data/suburbs";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { breadcrumbSchema } from "@/lib/schema";
+import { BUSINESS } from "@/data/business";
 
 export const Route = createFileRoute("/locations/$region/")({
   loader: ({ params }) => {
@@ -25,6 +26,7 @@ export const Route = createFileRoute("/locations/$region/")({
         { property: "og:description", content: description },
         { property: "og:image", content: r.image },
       ],
+      links: [{ rel: "canonical", href: `${BUSINESS.url}/locations/${r.id}` }],
       scripts: [
         {
           type: "application/ld+json",
