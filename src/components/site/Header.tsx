@@ -3,17 +3,18 @@ import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Logo } from "./Logo";
 import { BUSINESS } from "@/data/business";
+import { REGIONS } from "@/data/suburbs";
 
 const NAV = [
   { to: "/services", label: "Services" },
   { to: "/three-stage", label: "The Method" },
-  { to: "/locations", label: "Locations" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [regionsOpen, setRegionsOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-3 lg:px-12">
@@ -21,6 +22,61 @@ export function Header() {
           <Logo />
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
+          <Link
+            to="/services"
+            className="label-caps text-foreground/80 hover:text-gold transition-colors inline-flex items-center min-h-11 px-1"
+            activeProps={{ style: { color: "var(--gold)" } }}
+          >
+            Services
+          </Link>
+          <Link
+            to="/three-stage"
+            className="label-caps text-foreground/80 hover:text-gold transition-colors inline-flex items-center min-h-11 px-1"
+            activeProps={{ style: { color: "var(--gold)" } }}
+          >
+            The Method
+          </Link>
+          <div
+            className="relative"
+            onMouseEnter={() => setRegionsOpen(true)}
+            onMouseLeave={() => setRegionsOpen(false)}
+          >
+            <Link
+              to="/locations"
+              className="label-caps text-foreground/80 hover:text-gold transition-colors inline-flex items-center min-h-11 px-1"
+              activeProps={{ style: { color: "var(--gold)" } }}
+              aria-haspopup="true"
+              aria-expanded={regionsOpen}
+            >
+              Locations ▾
+            </Link>
+            {regionsOpen && (
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 min-w-[260px]">
+                <div className="border border-white/10 bg-[oklch(0.13_0_0)] shadow-2xl">
+                  <Link
+                    to="/locations"
+                    className="block px-5 py-3 label-caps text-foreground/85 hover:bg-[oklch(0.18_0_0)] hover:text-gold border-b border-white/10"
+                  >
+                    All 93 Suburbs →
+                  </Link>
+                  {REGIONS.map((r) => (
+                    <Link
+                      key={r.id}
+                      to="/locations/$region"
+                      params={{ region: r.id }}
+                      className="flex items-center justify-between gap-4 px-5 py-3 hover:bg-[oklch(0.18_0_0)] border-b border-white/5 last:border-b-0 group"
+                    >
+                      <div>
+                        <div className="label-caps text-foreground/85 group-hover:text-gold">{r.name}</div>
+                        <div className="text-xs text-foreground/55 mt-0.5">{r.tagline}</div>
+                      </div>
+                      <span className="text-xs text-foreground/40">{r.suburbs.length}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
           {NAV.map((item) => (
             <Link
               key={item.to}
