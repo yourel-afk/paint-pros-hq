@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow } from "@/components/site/SiteLayout";
 import { REGIONS, slugify } from "@/data/suburbs";
+import { BUSINESS } from "@/data/business";
 
 export const Route = createFileRoute("/locations/")({
   head: () => ({
@@ -13,6 +14,7 @@ export const Route = createFileRoute("/locations/")({
       { property: "og:title", content: "Service Locations — Painter Melbourne" },
       { property: "og:description", content: "93 Melbourne suburbs across four regional corridors, dispatched from Mitcham HQ." },
     ],
+    links: [{ rel: "canonical", href: `${BUSINESS.url}/locations` }],
   }),
   component: LocationsIndex,
 });

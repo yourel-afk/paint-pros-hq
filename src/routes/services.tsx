@@ -3,6 +3,7 @@ import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLa
 import { TrustBar } from "@/components/site/TrustBar";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { Brush, Home, Building2, Palette, Droplets, Trees } from "lucide-react";
+import { BUSINESS } from "@/data/business";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/services")({
         content: "Interior, exterior, heritage, coastal defense and bushland-grade systems by Mitcham HQ master painters.",
       },
     ],
+    links: [{ rel: "canonical", href: `${BUSINESS.url}/services` }],
   }),
   component: ServicesPage,
 });
