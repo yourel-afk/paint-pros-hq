@@ -52,7 +52,7 @@ function LocationsIndex() {
                       key={s}
                       to="/locations/$region/$suburb"
                       params={{ region: r.id, suburb: slugify(s) }}
-                      className="text-foreground/85 hover:text-gold transition-colors"
+                      className="text-foreground/85 hover:text-gold transition-colors flex items-center min-h-11 py-1"
                     >
                       {s}
                     </Link>

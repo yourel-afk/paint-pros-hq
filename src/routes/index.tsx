@@ -4,6 +4,7 @@ import { TrustBar } from "@/components/site/TrustBar";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { PricingTiers } from "@/components/site/PricingTiers";
 import { REGIONS } from "@/data/suburbs";
+import { BUSINESS } from "@/data/business";
 import heroImg from "@/assets/hero-mansion.jpg";
 import { ArrowUpRight } from "lucide-react";
 
@@ -22,6 +23,10 @@ export const Route = createFileRoute("/")({
         content: "Mitcham HQ master painters. Zero subcontractors. 10-year guarantee. Serving 93 Melbourne suburbs.",
       },
       { property: "og:image", content: heroImg },
+      { property: "twitter:image", content: heroImg },
+      { property: "twitter:title", content: "Painter Melbourne — High-End Residential Master Painters" },
+      { property: "twitter:description", content: "Mitcham HQ master painters. Zero subcontractors. 10-year guarantee. 93 Melbourne suburbs." },
+      { rel: "canonical", href: BUSINESS.url } as never,
     ],
     scripts: [
       {
@@ -29,20 +34,30 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "Painter Melbourne",
-          image: "https://paintermelbourne.com.au/og.jpg",
-          "@id": "https://paintermelbourne.com.au",
-          url: "https://paintermelbourne.com.au",
-          telephone: "+61-1300-767-246",
+          name: BUSINESS.name,
+          legalName: BUSINESS.legalName,
+          image: `${BUSINESS.url}/og.jpg`,
+          "@id": BUSINESS.url,
+          url: BUSINESS.url,
+          telephone: BUSINESS.phoneE164,
+          email: BUSINESS.email,
           priceRange: "$$$",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Mitcham HQ",
-            addressLocality: "Mitcham",
-            addressRegion: "VIC",
-            postalCode: "3132",
-            addressCountry: "AU",
+            streetAddress: BUSINESS.street,
+            addressLocality: BUSINESS.locality,
+            addressRegion: BUSINESS.region,
+            postalCode: BUSINESS.postcode,
+            addressCountry: BUSINESS.country,
           },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              opens: "07:00",
+              closes: "18:00",
+            },
+          ],
           areaServed: REGIONS.flatMap((r) => r.suburbs).map((s) => ({
             "@type": "City",
             name: s,

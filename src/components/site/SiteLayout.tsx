@@ -1,6 +1,7 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ReactNode } from "react";
+import { BUSINESS } from "@/data/business";
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
@@ -48,13 +49,20 @@ export function CTABlock({
           <h3 className="text-3xl lg:text-4xl font-bold">{title}</h3>
           <p className="mt-4 text-foreground/75 max-w-xl">{subtitle}</p>
         </div>
-        <div className="lg:col-span-4 lg:text-right">
+        <div className="lg:col-span-4 lg:text-right flex flex-col gap-3 lg:items-end">
           <a
             href="/contact"
-            className="inline-flex items-center justify-center bg-gold px-8 py-4 label-caps"
+            className="inline-flex items-center justify-center min-h-12 px-8 py-4 label-caps"
             style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
           >
             Get a Mitcham HQ Quote
+          </a>
+          <a
+            href={BUSINESS.phoneHref}
+            className="inline-flex items-center justify-center min-h-11 px-6 label-caps text-foreground/85 hover:text-gold"
+            aria-label={`Call Mitcham HQ on ${BUSINESS.phoneDisplay}`}
+          >
+            or call {BUSINESS.phoneDisplay}
           </a>
         </div>
       </div>
