@@ -11,20 +11,20 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Painter Melbourne — High-End Residential Master Painters | Mitcham HQ" },
+      { title: "Painter Melbourne | High-End Residential Master Painters" },
       {
         name: "description",
         content:
           "Melbourne's master painters for high-end residential. 100% in-house crews from our Mitcham HQ, 10-year masterpiece guarantee, serving 93 suburbs.",
       },
-      { property: "og:title", content: "Painter Melbourne — High-End Residential Master Painters" },
+      { property: "og:title", content: "Painter Melbourne | High-End Residential Master Painters" },
       {
         property: "og:description",
         content: "Mitcham HQ master painters. Zero subcontractors. 10-year guarantee. Serving 93 Melbourne suburbs.",
       },
       { property: "og:image", content: heroImg },
       { property: "twitter:image", content: heroImg },
-      { property: "twitter:title", content: "Painter Melbourne — High-End Residential Master Painters" },
+      { property: "twitter:title", content: "Painter Melbourne | High-End Residential Master Painters" },
       { property: "twitter:description", content: "Mitcham HQ master painters. Zero subcontractors. 10-year guarantee. 93 Melbourne suburbs." },
     ],
     links: [
@@ -60,7 +60,7 @@ function Index() {
             <span style={{ color: "var(--gold)" }}>backed by a 10-year masterpiece guarantee.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg lg:text-xl text-foreground/80 leading-relaxed">
-            100% in-house master painters. Zero subcontractors. Mobilised from our Mitcham HQ to 93 Melbourne suburbs across the Bayside, Inner South-East, South-East Growth and Eastern corridors.
+            100% in-house master painters. Zero subcontractors. Strategically based in Mitcham, covering 93 Melbourne suburbs across the Bayside, Inner South-East, South-East Growth and Eastern corridors via the EastLink and Monash networks.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link

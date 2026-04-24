@@ -18,7 +18,7 @@ export const BUSINESS = {
   region: "VIC",
   postcode: "3132",
   country: "AU",
-  hours: "Mon–Sat · 7am – 6pm",
+  hours: "Mon to Sat · 7am to 6pm",
   url: "https://paintermelbourne.com.au",
   guarantee: "10-Year Masterpiece Guarantee",
 } as const;

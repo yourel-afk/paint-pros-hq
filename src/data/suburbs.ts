@@ -49,7 +49,7 @@ export const REGIONS: Region[] = [
     tagline: "Modern Estate Finishes",
     specialty: "Contemporary render & feature-wall execution",
     narrative:
-      "The South-East corridor is Melbourne's premium new-build belt. We specialise in factory-grade render coatings, dark feature walls, and large-format spray application across two-storey contemporary estates.",
+      "The South-East corridor is Melbourne's premium new-build belt. UV-reflective coatings on dark estate facades, modern render protection on contemporary builds, and industrial-grade epoxy floors in every double garage. Two-storey homes, large-format spray and back-roll, every coat to spec.",
     image: segrowthImg,
     suburbs: [
       "Springvale","Noble Park","Keysborough","Dandenong","Dandenong North","Dandenong South",
@@ -64,7 +64,7 @@ export const REGIONS: Region[] = [
     tagline: "Mitcham HQ Heartland",
     specialty: "Bushland fire-rated & timber-finish expertise",
     narrative:
-      "Headquartered in Mitcham, the Eastern corridor is our home turf. Leafy bushland properties demand BAL-rated coatings, timber preservation systems, and crews on-site within the hour from our central depot.",
+      "Headquartered in Mitcham, the Eastern corridor is our home turf. Heritage and weatherboard mastery is the local specialty: lead-paint XRF testing on pre-1970 substrates, four-season timber movement managed with oil-modified primers, and 70% prep-first restoration on every Federation trim. Same decentralised crew model, 7:00 AM starts.",
     image: easternImg,
     suburbs: [
       "Mitcham","Vermont","Vermont South","Nunawading","Blackburn","Blackburn North","Blackburn South",

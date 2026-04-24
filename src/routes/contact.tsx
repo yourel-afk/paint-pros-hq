@@ -12,8 +12,8 @@ export const Route = createFileRoute("/contact")({
         name: "description",
         content: "Request a fixed-price quote from Painter Melbourne's Mitcham HQ. Serving 93 high-end residential suburbs across Melbourne.",
       },
-      { property: "og:title", content: "Contact — Painter Melbourne Mitcham HQ" },
-      { property: "og:description", content: "Request your Mitcham HQ quote — 93 Melbourne suburbs covered." },
+      { property: "og:title", content: "Contact Painter Melbourne | Mitcham-Based Master Painters" },
+      { property: "og:description", content: "Request your fixed-price quote. 93 Melbourne suburbs covered." },
     ],
     links: [{ rel: "canonical", href: `${BUSINESS.url}/contact` }],
   }),
@@ -30,7 +30,7 @@ function ContactPage() {
           Tell us about <span style={{ color: "var(--gold)" }}>your property.</span>
         </h1>
         <p className="mt-6 text-lg text-foreground/75 max-w-2xl">
-          Every quote begins with a Mitcham HQ site visit by a senior master painter. No call centres, no high-pressure sales — just a fixed-price specification you can trust.
+          Every quote begins with a site visit by a senior master painter. No call centres, no high-pressure sales. Just a fixed-price specification you can trust.
         </p>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-12">

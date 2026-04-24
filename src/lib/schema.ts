@@ -88,7 +88,7 @@ export function servicesCatalogueSchema() {
         "@type": "Service",
         "@id": `${BUSINESS.url}/services#interior`,
         serviceType: "Interior Residential Painting",
-        name: "Interior Painting — Master Finish",
+        name: "Interior Painting | Master Finish",
         description:
           "Premium interior repainting across walls, ceilings, trim, doors and feature joinery. Low-VOC, designer-grade systems applied by Painter Melbourne's in-house master crew.",
         provider,
@@ -99,7 +99,7 @@ export function servicesCatalogueSchema() {
         "@type": "Service",
         "@id": `${BUSINESS.url}/services#exterior`,
         serviceType: "Exterior Residential Painting",
-        name: "Exterior Painting — Coastal Defense & Heritage Restoration",
+        name: "Exterior Painting | Coastal Defense & Heritage Restoration",
         description:
           "Full exterior repaints including weatherboard, render, brick, eaves and timber trim. Engineered for Melbourne's coastal salt-spray, UV and heritage colour-correct overlays.",
         provider,
@@ -110,7 +110,7 @@ export function servicesCatalogueSchema() {
         "@type": "Service",
         "@id": `${BUSINESS.url}/services#epoxy`,
         serviceType: "Epoxy Floor Coatings",
-        name: "Epoxy Floors — Garage, Workshop & Wet-Area Systems",
+        name: "Epoxy Floors | Garage, Workshop & Wet-Area Systems",
         description:
           "High-build epoxy and polyaspartic floor systems for residential garages, workshops and wet areas. Slip-rated, chemical-resistant, decade-grade durability.",
         provider,
@@ -140,7 +140,7 @@ export function suburbFaqSchema(suburb: string, regionName: string, regionTaglin
         name: `How fast can a Painter Melbourne crew reach ${suburb} from your Mitcham HQ?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Our Mitcham HQ logistics hub mobilises ${regionName} crews via the EastLink and Monash corridors. ${suburb} sites typically receive on-site survey within 24 hours of enquiry, with full master-painter teams dispatched directly from Mitcham — never subcontracted, never re-routed.`,
+          text: `Strategically based in Mitcham, our teams provide rapid coverage across Greater Melbourne via the EastLink and Monash corridors. ${suburb} sites typically receive an on-site survey within 24 hours of enquiry. Our decentralised crew model ensures on-time starts at 7:00 AM sharp, regardless of your suburb. Crews are 100% in-house, never subcontracted, never re-routed.`,
         },
       },
       {
@@ -156,7 +156,7 @@ export function suburbFaqSchema(suburb: string, regionName: string, regionTaglin
         name: `Is the 10-Year Masterpiece Guarantee valid on every ${suburb} project?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Yes. Every project in ${suburb} — interior, exterior or epoxy — is signed off by a senior master painter from our Mitcham HQ and backed by Painter Melbourne's full 10-Year Masterpiece Guarantee. Crews are 100% in-house. Zero subcontractors.`,
+          text: `Yes. Every project in ${suburb}, whether interior, exterior or epoxy, is signed off by a senior Painter Melbourne master painter and backed by our full 10-Year Masterpiece Guarantee. Crews are 100% in-house. Zero subcontractors.`,
         },
       },
     ],

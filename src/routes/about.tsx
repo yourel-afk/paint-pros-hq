@@ -7,12 +7,12 @@ import { NoSubbies } from "@/components/site/NoSubbies";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Mitcham HQ Master Painters | Painter Melbourne" },
+      { title: "About Painter Melbourne | Mitcham-Based Master Painters" },
       {
         name: "description",
         content: "Painter Melbourne is an in-house master crew operating from Mitcham HQ. Zero subcontractors. 10-year masterpiece guarantee on every project.",
       },
-      { property: "og:title", content: "About Painter Melbourne — Mitcham HQ" },
+      { property: "og:title", content: "About Painter Melbourne | Mitcham-Based Master Painters" },
       { property: "og:description", content: "In-house master crew. Zero subcontractors. 10-year masterpiece guarantee." },
     ],
     links: [{ rel: "canonical", href: `${BUSINESS.url}/about` }],
@@ -34,13 +34,13 @@ function AboutPage() {
               Painter Melbourne started for one reason: the top end of Melbourne residential work was being subcontracted to whoever could turn up cheapest, and the finish was showing it. Heritage trim being whipped over with one coat. Coastal facades flashing inside two summers. Clients chasing callbacks that nobody owned.
             </p>
             <p>
-              So we built it the other way. A permanent depot in Mitcham. A permanent crew on the books — employees, not labour-hire, not subbies. The same painters you meet on quote day are the painters cutting in your cornices three weeks later.
+              So we built it the other way. A permanent depot in Mitcham. A permanent crew on the books. Employees, not labour-hire, not subbies. The same painters you meet on quote day are the painters cutting in your cornices three weeks later.
             </p>
             <p>
-              We spend 70% of our time on prep — patching, gapping, dustless sanding with Festool gear, sugar-soap wash-down, spot priming — because that's where the 10-year guarantee actually comes from. The premium top coats are the easy part. Anyone can roll Dulux. Not everyone earns the surface underneath it.
+              We spend 70% of our time on prep. Patching, gapping, dustless sanding with Festool gear, sugar-soap wash-down, spot priming. Because that's where the 10-year guarantee actually comes from. The premium top coats are the easy part. Anyone can roll Dulux. Not everyone earns the surface underneath it.
             </p>
             <p>
-              Yes, we're Dulux Accredited, VBA Licensed and carry $20M public liability. Those are the baseline. The real differentiator is the bloke standing on your scaffold at 7am — and the fact that he's the same bloke standing there at 5pm, three weeks later, walking the job with you under a torch.
+              Yes, we're Dulux Accredited, VBA Licensed and carry $20M public liability. Those are the baseline. The real differentiator is the bloke standing on your scaffold at 7:00 AM, and the fact that he's the same bloke standing there at 5pm three weeks later, walking the job with you under a torch.
             </p>
           </div>
           <div className="lg:col-span-5 border border-white/10 p-10 bg-[oklch(0.18_0_0)]">

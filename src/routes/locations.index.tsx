@@ -6,12 +6,12 @@ import { BUSINESS } from "@/data/business";
 export const Route = createFileRoute("/locations/")({
   head: () => ({
     meta: [
-      { title: "Service Locations — 93 Melbourne Suburbs | Painter Melbourne" },
+      { title: "Service Locations | 93 Melbourne Suburbs | Painter Melbourne" },
       {
         name: "description",
         content: "Painter Melbourne services 93 high-end residential suburbs across Bayside, Inner South-East, South-East Growth and Eastern Melbourne corridors from our Mitcham HQ.",
       },
-      { property: "og:title", content: "Service Locations — Painter Melbourne" },
+      { property: "og:title", content: "Service Locations | Painter Melbourne" },
       { property: "og:description", content: "93 Melbourne suburbs across four regional corridors, dispatched from Mitcham HQ." },
     ],
     links: [{ rel: "canonical", href: `${BUSINESS.url}/locations` }],
