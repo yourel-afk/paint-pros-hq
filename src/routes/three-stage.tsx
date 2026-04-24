@@ -12,10 +12,10 @@ export const Route = createFileRoute("/three-stage")({
       {
         name: "description",
         content:
-          "Diagnostic Prep, Precision Application and Signature Handover — the proprietary three-stage protocol behind every Painter Melbourne project.",
+          "The Grunt Work, Precision Application and Signature Handover. The proprietary three-stage protocol behind every Painter Melbourne project.",
       },
       { property: "og:title", content: "The Three-Stage Excellence Method" },
-      { property: "og:description", content: "Painter Melbourne's proprietary protocol: Diagnostic Prep, Precision Application, Signature Handover." },
+      { property: "og:description", content: "Painter Melbourne's protocol: 70% prep, 30% paint. Same in-house crew, day one to handover." },
     ],
     links: [{ rel: "canonical", href: `${BUSINESS.url}/three-stage` }],
   }),
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/three-stage")({
           The <span style={{ color: "var(--gold)" }}>Three-Stage Excellence</span> Method.
         </h1>
         <p className="mt-6 text-lg text-foreground/85 max-w-3xl leading-relaxed">
-          We spend 70% of our time on prep because that's where the 10-year guarantee actually comes from. The painting bit is the reward at the end — and we don't take shortcuts on either side of it. Same crew, day one to handover. <span className="text-foreground">No subbies.</span>
+          We spend 70% of our time on prep because that's where the 10-year guarantee actually comes from. The painting bit is the reward at the end, and we don't take shortcuts on either side of it. Same crew, day one to handover. <span className="text-foreground">No subbies.</span>
         </p>
       </Section>
       <Section className="border-t border-white/10">

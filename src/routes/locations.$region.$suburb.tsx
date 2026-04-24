@@ -21,8 +21,8 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
   head: ({ loaderData }) => {
     if (!loaderData) return { meta: [{ title: "Suburb — Painter Melbourne" }] };
     const { region, suburb } = loaderData;
-    const title = `Painter ${suburb} — ${region.tagline} Specialists | Mitcham HQ`;
-    const description = `High-end residential painters serving ${suburb}, ${region.name}. ${region.specialty}. 10-year masterpiece guarantee from Painter Melbourne's Mitcham HQ.`;
+    const title = `Master House Painters in ${suburb} | 10-Year Guarantee`;
+    const description = `High-end residential painters serving ${suburb}, ${region.name}. ${region.specialty}. Backed by Painter Melbourne's 10-Year Masterpiece Guarantee.`;
     return {
       meta: [
         { title },
@@ -134,7 +134,7 @@ function SuburbPage() {
             Master House Painters in <span style={{ color: "var(--gold)" }}>{suburb}</span>
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-foreground/85 max-w-2xl">
-            High-end residential painting in {suburb}, delivered exclusively by Painter Melbourne's in-house master crew from our Mitcham HQ. Backed by the 10-Year Masterpiece Guarantee.
+            High-end residential painting in {suburb}, delivered exclusively by Painter Melbourne's in-house master crew. Strategically based in Mitcham, backed by the 10-Year Masterpiece Guarantee.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link

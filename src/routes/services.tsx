@@ -9,13 +9,13 @@ import { NoSubbies } from "@/components/site/NoSubbies";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — High-End Residential Painting | Painter Melbourne" },
+      { title: "Painting Services | Interior, Exterior, Heritage &amp; Coastal | Painter Melbourne" },
       {
         name: "description",
         content:
           "Interior, exterior, heritage restoration, coastal defense and bushland-grade coating systems delivered by Painter Melbourne's in-house master crews from Mitcham HQ.",
       },
-      { property: "og:title", content: "Services — Painter Melbourne" },
+      { property: "og:title", content: "Painting Services | Painter Melbourne" },
       {
         property: "og:description",
         content: "Interior, exterior, heritage, coastal defense and bushland-grade systems by Mitcham HQ master painters.",

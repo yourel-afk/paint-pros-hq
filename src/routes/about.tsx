@@ -7,12 +7,12 @@ import { NoSubbies } from "@/components/site/NoSubbies";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Mitcham HQ Master Painters | Painter Melbourne" },
+      { title: "About Painter Melbourne | Mitcham-Based Master Painters" },
       {
         name: "description",
         content: "Painter Melbourne is an in-house master crew operating from Mitcham HQ. Zero subcontractors. 10-year masterpiece guarantee on every project.",
       },
-      { property: "og:title", content: "About Painter Melbourne — Mitcham HQ" },
+      { property: "og:title", content: "About Painter Melbourne | Mitcham-Based Master Painters" },
       { property: "og:description", content: "In-house master crew. Zero subcontractors. 10-year masterpiece guarantee." },
     ],
     links: [{ rel: "canonical", href: `${BUSINESS.url}/about` }],
