@@ -35,12 +35,12 @@ export function MitchamFlagship() {
             <Building2 className="h-3.5 w-3.5" /> The Painter Melbourne Headquarters
           </div>
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
-            Painter <span style={{ color: "var(--gold)" }}>Mitcham</span>
+            Master House Painters in <span style={{ color: "var(--gold)" }}>Mitcham</span>
             <br />
             <span className="text-foreground/85 text-3xl lg:text-5xl font-bold">You're not visiting a service area. You're at our HQ.</span>
           </h1>
           <p className="mt-8 text-lg lg:text-xl text-foreground/85 max-w-2xl">
-            Mitcham isn't a satellite suburb on a service map — it's the purpose-built headquarters from which every Painter Melbourne crew is dispatched. When you book a Mitcham project, you get the closest, fastest, most senior master painters we have.
+            Mitcham isn't a satellite suburb on a service map. It's the purpose-built headquarters that anchors every Painter Melbourne crew. When you book a Mitcham project, you get the closest, fastest, most senior master painters we have.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -72,10 +72,10 @@ export function MitchamFlagship() {
             </h2>
             <div className="mt-8 space-y-5 text-foreground/80 leading-relaxed text-lg">
               <p>
-                Most painting companies operate from a phone number and a ute. Painter Melbourne operates from a permanent, purpose-built depot in Mitcham — staffed seven days, stocked with climate-specific Dulux systems, and running a fleet that mobilises through the EastLink and Monash corridors before peak traffic.
+                Most painting companies operate from a phone number and a ute. Painter Melbourne operates from a permanent, purpose-built depot in Mitcham. Staffed seven days, stocked with climate-specific Dulux systems, and feeding a decentralised crew model that covers Greater Melbourne via the EastLink and Monash corridors.
               </p>
               <p>
-                For Mitcham residents, this proximity is structural. Our senior master painters live in your postcode. Site visits are same-week, mobilisation is same-morning, and post-handover service is a ten-minute drive — not a callback queue.
+                Strategically based in Mitcham, our teams provide rapid coverage across Greater Melbourne via the EastLink and Monash corridors. Our decentralised crew model ensures on-time starts at 7:00 AM sharp in Mitcham, regardless of your suburb. Site visits are same-week and post-handover service is a ten-minute drive. Not a callback queue.
               </p>
               <p>
                 Mitcham is also our training ground. Every apprentice serves their first six months under a senior master on local Mitcham, Vermont, and Blackburn projects before being approved for unsupervised work elsewhere. The standard you receive in Mitcham is the standard the rest of Melbourne is measured against.
@@ -102,7 +102,7 @@ export function MitchamFlagship() {
                 <div>
                   <div className="label-caps mb-2" style={{ color: "var(--gold)" }}>Same-Morning Mobilisation</div>
                   <p className="text-foreground/85 leading-relaxed">
-                    Mitcham crews depart the depot by 6:45am, on-site in {BUSINESS.locality} within 15 minutes — before the EastLink corridor congests.
+                    Crews are on-site in {BUSINESS.locality} at 7:00 AM sharp. Decentralised dispatch via the EastLink corridor before peak traffic.
                   </p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export function MitchamFlagship() {
                 <div>
                   <div className="label-caps mb-2" style={{ color: "var(--gold)" }}>Heartland Suburbs</div>
                   <p className="text-foreground/85 leading-relaxed">
-                    Vermont, Blackburn, Nunawading, Box Hill, Donvale, Ringwood, Heathmont — all serviced from this depot inside a 12-minute radius.
+                    Vermont, Blackburn, Nunawading, Box Hill, Donvale, Ringwood, Heathmont. All serviced from this depot inside a 12-minute radius.
                   </p>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export function MitchamFlagship() {
             </Link>
           ))}
         </div>
-        <CTABlock title="Book a Mitcham HQ master painter — closest crew, fastest mobilisation." />
+        <CTABlock title="Book your Mitcham master painter. Closest crew, fastest mobilisation." />
       </Section>
     </SiteLayout>
   );

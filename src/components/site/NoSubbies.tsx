@@ -25,7 +25,7 @@ export function NoSubbies() {
           },
           {
             icon: HardHat,
-            title: "Employees — not labour-hire",
+            title: "Employees, not labour-hire",
             body: "Every painter is a Painter Melbourne employee. Trained in-house, paid by us, accountable to you.",
           },
           {

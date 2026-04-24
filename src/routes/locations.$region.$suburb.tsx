@@ -167,7 +167,7 @@ function SuburbPage() {
             <div className="mt-8 space-y-5 text-foreground/80 leading-relaxed text-lg">
               <p>{region.narrative}</p>
               <p>
-                In {suburb} specifically, our crews regularly work on properties exposed to {region.id === "bayside" ? "salt-laden onshore winds, intense UV reflection off the bay, and humidity that punishes lesser coatings" : region.id === "inner-se" ? "heritage overlays, ornate Victorian and Edwardian detail, and the colour-correctness expectations of period purists" : region.id === "se-growth" ? "large-format render facades, dark feature walls and the high-build film thicknesses required by contemporary architectural specifications" : "leafy bushland micro-climates, dappled UV exposure, and BAL-rated fire-resistance requirements"}.
+                In {suburb} specifically, our crews regularly work on properties exposed to {region.id === "bayside" ? "salt-laden onshore winds, intense UV reflection off the bay, and humidity that punishes lesser coatings" : region.id === "inner-se" ? "heritage overlays, ornate Victorian and Edwardian detail, and the colour-correctness expectations of period purists" : region.id === "se-growth" ? "large-format render facades, dark feature walls, and the high-build film thicknesses required by contemporary architectural specifications" : "leafy bushland micro-climates, dappled UV exposure, four-season timber movement, and lead-paint legacies on pre-1970 weatherboard cottages"}.
               </p>
               <p>
                 Every {suburb} project is specified, scoped and signed off by a senior Painter Melbourne master painter — never a subcontractor, never a quote-bot. Your finish is our reputation.
