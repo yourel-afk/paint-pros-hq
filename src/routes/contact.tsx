@@ -7,10 +7,10 @@ import { BUSINESS } from "@/data/business";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Get a Mitcham HQ Quote | Painter Melbourne" },
+      { title: "Get a Mitcham Office Quote | Painter Melbourne" },
       {
         name: "description",
-        content: "Request a fixed-price quote from Painter Melbourne's Mitcham HQ. Serving 93 high-end residential suburbs across Melbourne.",
+        content: "Request a fixed-price quote from Painter Melbourne's Mitcham Office. Serving 93 high-end residential suburbs across Melbourne.",
       },
       { property: "og:title", content: "Contact Painter Melbourne | Mitcham-Based Master Painters" },
       { property: "og:description", content: "Request your fixed-price quote. 93 Melbourne suburbs covered." },
@@ -25,7 +25,7 @@ function ContactPage() {
   return (
     <SiteLayout>
       <Section>
-        <Eyebrow>Mitcham HQ · Quote Request</Eyebrow>
+        <Eyebrow>Mitcham Office · Quote Request</Eyebrow>
         <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
           Tell us about <span style={{ color: "var(--gold)" }}>your property.</span>
         </h1>
@@ -62,12 +62,12 @@ function ContactPage() {
               className="inline-flex items-center bg-gold px-8 py-4 label-caps disabled:opacity-50"
               style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
             >
-              {sent ? "Quote request received" : "Request Mitcham HQ Quote"}
+              {sent ? "Quote request received" : "Request Mitcham Office Quote"}
             </button>
           </form>
 
           <address className="not-italic lg:col-span-5 border border-white/10 bg-[oklch(0.18_0_0)] p-10 space-y-6">
-            <Info icon={<MapPin />} label="Mitcham HQ" value={`${BUSINESS.locality}, ${BUSINESS.region} ${BUSINESS.postcode}`} />
+            <Info icon={<MapPin />} label="Mitcham Office" value={`${BUSINESS.locality}, ${BUSINESS.region} ${BUSINESS.postcode}`} />
             <Info icon={<Phone />} label="Phone" value={BUSINESS.phoneDisplay} href={BUSINESS.phoneHref} />
             <Info icon={<Mail />} label="Email" value={BUSINESS.email} href={BUSINESS.emailHref} />
             <Info icon={<Clock />} label="Hours" value={BUSINESS.hours} />

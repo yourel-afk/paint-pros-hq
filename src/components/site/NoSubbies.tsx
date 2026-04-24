@@ -31,7 +31,7 @@ export function NoSubbies() {
           {
             icon: ShieldCheck,
             title: "One throat to choke",
-            body: "If anything goes sideways, you call Mitcham HQ. Not a 1300 number. Not a subbie's voicemail.",
+            body: "If anything goes sideways, you call Mitcham Office. Not a 1300 number. Not a subbie's voicemail.",
           },
         ].map(({ icon: Icon, title, body }) => (
           <div key={title} className="border border-white/10 bg-background p-6">

@@ -13,7 +13,7 @@ export const BUSINESS = {
   phoneHref: "tel:+61414402101",
   email: "quotes@paintermelbourne.com.au",
   emailHref: "mailto:quotes@paintermelbourne.com.au",
-  street: "Mitcham HQ",
+  street: "Mitcham Office",
   locality: "Mitcham",
   region: "VIC",
   postcode: "3132",

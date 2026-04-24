@@ -61,7 +61,7 @@ export const REGIONS: Region[] = [
   {
     id: "eastern-hills",
     name: "Eastern & Hills",
-    tagline: "Mitcham HQ Heartland",
+    tagline: "Mitcham Office Heartland",
     specialty: "Bushland fire-rated & timber-finish expertise",
     narrative:
       "Headquartered in Mitcham, the Eastern corridor is our home turf. Heritage and weatherboard mastery is the local specialty: lead-paint XRF testing on pre-1970 substrates, four-season timber movement managed with oil-modified primers, and 70% prep-first restoration on every Federation trim. Same decentralised crew model, 7:00 AM starts.",

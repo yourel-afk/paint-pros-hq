@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       { title: "About Painter Melbourne | Mitcham-Based Master Painters" },
       {
         name: "description",
-        content: "Painter Melbourne is an in-house master crew operating from Mitcham HQ. Zero subcontractors. 10-year masterpiece guarantee on every project.",
+        content: "Painter Melbourne is an in-house master crew operating from Mitcham Office. Zero subcontractors. 10-year masterpiece guarantee on every project.",
       },
       { property: "og:title", content: "About Painter Melbourne | Mitcham-Based Master Painters" },
       { property: "og:description", content: "In-house master crew. Zero subcontractors. 10-year masterpiece guarantee." },
@@ -26,7 +26,7 @@ function AboutPage() {
       <Section>
         <Eyebrow>About Painter Melbourne</Eyebrow>
         <h1 className="text-5xl lg:text-7xl font-extrabold max-w-4xl tracking-tight">
-          One crew. One HQ. <span style={{ color: "var(--gold)" }}>No subbies.</span>
+          One crew. One Office. <span style={{ color: "var(--gold)" }}>No subbies.</span>
         </h1>
         <div className="mt-12 grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7 space-y-6 text-lg text-foreground/80 leading-relaxed">

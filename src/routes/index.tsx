@@ -3,6 +3,7 @@ import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLa
 import { TrustBar } from "@/components/site/TrustBar";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { PricingTiers } from "@/components/site/PricingTiers";
+import { RecentTransformations } from "@/components/site/RecentTransformations";
 import { REGIONS } from "@/data/suburbs";
 import { BUSINESS } from "@/data/business";
 import heroImg from "@/assets/hero-mansion.jpg";
@@ -15,17 +16,17 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Melbourne's master painters for high-end residential. 100% in-house crews from our Mitcham HQ, 10-year masterpiece guarantee, serving 93 suburbs.",
+          "Melbourne's master painters for high-end residential. 100% in-house crews from our Mitcham Office, 10-year masterpiece guarantee, serving 93 suburbs.",
       },
       { property: "og:title", content: "Painter Melbourne | High-End Residential Master Painters" },
       {
         property: "og:description",
-        content: "Mitcham HQ master painters. Zero subcontractors. 10-year guarantee. Serving 93 Melbourne suburbs.",
+        content: "Mitcham Office master painters. Zero subcontractors. 10-year guarantee. Serving 93 Melbourne suburbs.",
       },
       { property: "og:image", content: heroImg },
       { property: "twitter:image", content: heroImg },
       { property: "twitter:title", content: "Painter Melbourne | High-End Residential Master Painters" },
-      { property: "twitter:description", content: "Mitcham HQ master painters. Zero subcontractors. 10-year guarantee. 93 Melbourne suburbs." },
+      { property: "twitter:description", content: "Mitcham Office master painters. Zero subcontractors. 10-year guarantee. 93 Melbourne suburbs." },
     ],
     links: [
       { rel: "canonical", href: `${BUSINESS.url}/` },
@@ -43,7 +44,7 @@ function Index() {
           <img
             src={heroImg}
             alt="Luxury Melbourne residential mansion freshly painted by Painter Melbourne master crew"
-            title="Mitcham HQ — High-End Residential Painting Melbourne"
+            title="Mitcham Office — High-End Residential Painting Melbourne"
             width={1920}
             height={1280}
             className="w-full h-full object-cover opacity-55"
@@ -52,7 +53,7 @@ function Index() {
         </div>
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-12 pt-24 pb-32 lg:pt-40 lg:pb-56">
           <div className="label-caps mb-8" style={{ color: "var(--gold)" }}>
-            Mitcham HQ · Established Master Painters
+            Mitcham Office · Established Master Painters
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-5xl leading-[1.02]">
             High-end residential painting,
@@ -68,7 +69,7 @@ function Index() {
               className="inline-flex items-center gap-2 bg-gold px-8 py-4 label-caps"
               style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
             >
-              Get a Mitcham HQ Quote <ArrowUpRight className="h-4 w-4" />
+              Get a Mitcham Office Quote <ArrowUpRight className="h-4 w-4" />
             </Link>
             <Link
               to="/three-stage"
@@ -82,6 +83,11 @@ function Index() {
 
       <TrustBar />
 
+      {/* RECENT TRANSFORMATIONS — Hyper-local proof of work */}
+      <Section>
+        <RecentTransformations />
+      </Section>
+
       <Section>
         <ThreeStage />
       </Section>
@@ -90,7 +96,7 @@ function Index() {
       <Section className="border-t border-white/10">
         <Eyebrow>The 93-Suburb Service Map</Eyebrow>
         <h2 className="text-4xl lg:text-6xl font-bold max-w-3xl">
-          One HQ. Four corridors. Ninety-three Melbourne suburbs.
+          One Office. Four corridors. Ninety-three Melbourne suburbs.
         </h2>
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
           {REGIONS.map((r) => (
@@ -103,7 +109,7 @@ function Index() {
               <img
                 src={r.image}
                 alt={`${r.name} Melbourne residential painting — ${r.specialty}`}
-                title={`Professional painting in ${r.name} — Mitcham HQ specialists`}
+                title={`Professional painting in ${r.name} — Mitcham Office specialists`}
                 loading="lazy"
                 width={1600}
                 height={1000}

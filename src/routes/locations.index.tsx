@@ -9,10 +9,10 @@ export const Route = createFileRoute("/locations/")({
       { title: "Service Locations | 93 Melbourne Suburbs | Painter Melbourne" },
       {
         name: "description",
-        content: "Painter Melbourne services 93 high-end residential suburbs across Bayside, Inner South-East, South-East Growth and Eastern Melbourne corridors from our Mitcham HQ.",
+        content: "Painter Melbourne services 93 high-end residential suburbs across Bayside, Inner South-East, South-East Growth and Eastern Melbourne corridors from our Mitcham Office.",
       },
       { property: "og:title", content: "Service Locations | Painter Melbourne" },
-      { property: "og:description", content: "93 Melbourne suburbs across four regional corridors, dispatched from Mitcham HQ." },
+      { property: "og:description", content: "93 Melbourne suburbs across four regional corridors, dispatched from Mitcham Office." },
     ],
     links: [{ rel: "canonical", href: `${BUSINESS.url}/locations` }],
   }),
@@ -25,7 +25,7 @@ function LocationsIndex() {
       <Section>
         <Eyebrow>The 93-Suburb Service Map</Eyebrow>
         <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
-          Where Mitcham HQ <span style={{ color: "var(--gold)" }}>dispatches.</span>
+          Where Mitcham Office <span style={{ color: "var(--gold)" }}>dispatches.</span>
         </h1>
         <p className="mt-6 text-lg text-foreground/75 max-w-2xl">
           Four regional corridors. Ninety-three high-end residential suburbs. Every project led by an in-house master painter, every time.
