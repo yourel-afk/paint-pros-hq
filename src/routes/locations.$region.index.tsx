@@ -14,7 +14,7 @@ export const Route = createFileRoute("/locations/$region/")({
     return { region };
   },
   head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Region — Painter Melbourne" }] };
+    if (!loaderData) return { meta: [{ title: "Region | Painter Melbourne" }] };
     const r = loaderData.region;
     const title = `${r.name} Painters | ${r.tagline} | Painter Melbourne`;
     const description = `${r.narrative.slice(0, 155)}`;

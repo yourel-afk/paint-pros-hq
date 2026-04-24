@@ -19,7 +19,7 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
     return { region, suburb: found.suburb };
   },
   head: ({ loaderData }) => {
-    if (!loaderData) return { meta: [{ title: "Suburb — Painter Melbourne" }] };
+    if (!loaderData) return { meta: [{ title: "Suburb | Painter Melbourne" }] };
     const { region, suburb } = loaderData;
     const title = `Master House Painters in ${suburb} | 10-Year Guarantee`;
     const description = `High-end residential painters serving ${suburb}, ${region.name}. ${region.specialty}. Backed by Painter Melbourne's 10-Year Masterpiece Guarantee.`;
@@ -170,7 +170,7 @@ function SuburbPage() {
                 In {suburb} specifically, our crews regularly work on properties exposed to {region.id === "bayside" ? "salt-laden onshore winds, intense UV reflection off the bay, and humidity that punishes lesser coatings" : region.id === "inner-se" ? "heritage overlays, ornate Victorian and Edwardian detail, and the colour-correctness expectations of period purists" : region.id === "se-growth" ? "large-format render facades, dark feature walls, and the high-build film thicknesses required by contemporary architectural specifications" : "leafy bushland micro-climates, dappled UV exposure, four-season timber movement, and lead-paint legacies on pre-1970 weatherboard cottages"}.
               </p>
               <p>
-                Every {suburb} project is specified, scoped and signed off by a senior Painter Melbourne master painter — never a subcontractor, never a quote-bot. Your finish is our reputation.
+                Every {suburb} project is specified, scoped and signed off by a senior Painter Melbourne master painter. Never a subcontractor, never a quote-bot. Your finish is our reputation.
               </p>
             </div>
           </div>
@@ -201,7 +201,7 @@ function SuburbPage() {
           5 closest suburbs to {suburb}
         </h2>
         <p className="mt-4 text-foreground/70 max-w-2xl">
-          Mitcham HQ dispatches the same master crew across these neighbouring {region.name} suburbs — same day, same standard, same 10-Year Masterpiece Guarantee.
+          Same in-house master crew across these neighbouring {region.name} suburbs. Same day, same standard, same 10-Year Masterpiece Guarantee.
         </p>
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-white/10 border border-white/10">
           {nearby.map((s: string) => (

@@ -36,7 +36,7 @@ export function PricingTiers() {
         What a Mitcham HQ project actually costs.
       </h2>
       <p className="mt-6 text-foreground/70 max-w-2xl">
-        Indicative ranges for high-end Melbourne residential. Every quote is fixed-price after a Mitcham HQ site visit — no variations, no surprises.
+        Indicative ranges for high-end Melbourne residential. Every quote is fixed-price after a senior master painter site visit. No variations, no surprises.
       </p>
       <div className="mt-16 grid gap-8 lg:grid-cols-2">
         {TIERS.map((t) => (
