@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLayout";
 import { TrustBar } from "@/components/site/TrustBar";
 import { MitchamLogistics } from "@/components/site/MitchamLogistics";
+import { RegionalSpecialty } from "@/components/site/RegionalSpecialty";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { findRegion, findSuburb, slugify } from "@/data/suburbs";
 import { BUSINESS } from "@/data/business";
@@ -174,7 +175,7 @@ function SuburbPage() {
             </div>
           </div>
           <div className="lg:col-span-5">
-            <MitchamLogistics suburb={suburb} />
+            <MitchamLogistics suburb={suburb} region={region.name} />
             <div className="mt-8 border border-white/10 bg-[oklch(0.18_0_0)] p-8">
               <div className="label-caps mb-4" style={{ color: "var(--gold)" }}>
                 Specialty for {region.name}
@@ -183,6 +184,10 @@ function SuburbPage() {
             </div>
           </div>
         </div>
+      </Section>
+
+      <Section className="border-t border-white/10">
+        <RegionalSpecialty region={region} suburb={suburb} />
       </Section>
 
       <Section className="border-t border-white/10">
