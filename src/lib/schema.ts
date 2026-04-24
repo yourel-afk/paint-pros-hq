@@ -21,7 +21,7 @@ const GEO_MITCHAM = {
 } as const;
 
 /**
- * Site-wide LocalBusiness schema — hard-coded for the Mitcham HQ.
+ * Site-wide LocalBusiness schema — hard-coded for the Mitcham Office.
  * Includes every serviced suburb in `areaServed` so Google can map the
  * full 93-suburb service polygon to one canonical legal entity.
  */
@@ -129,7 +129,7 @@ export function suburbFaqSchema(suburb: string, regionName: string, regionTaglin
   const isCoastal = regionTagline.toLowerCase().includes("coastal");
   const coastalAnswer = isCoastal
     ? `Yes. ${suburb} sits within Painter Melbourne's Coastal Defense zone. Every exterior in ${suburb} is specified with marine-grade elastomeric primers, salt-resistant topcoats and UV-stable pigments engineered for Port Phillip's salt-spray, onshore winds and reflected bay UV.`
-    : `Coastal Defense is reserved for Painter Melbourne's bayside zones, but ${suburb} homes still receive the matching salt-air-tested system on any facade exposed to Melbourne's prevailing weather. Our Mitcham HQ specs every ${suburb} exterior with the same marine-grade resin tech as our Bayside crews.`;
+    : `Coastal Defense is reserved for Painter Melbourne's bayside zones, but ${suburb} homes still receive the matching salt-air-tested system on any facade exposed to Melbourne's prevailing weather. Our Mitcham Office specs every ${suburb} exterior with the same marine-grade resin tech as our Bayside crews.`;
 
   return {
     "@context": "https://schema.org",
@@ -137,7 +137,7 @@ export function suburbFaqSchema(suburb: string, regionName: string, regionTaglin
     mainEntity: [
       {
         "@type": "Question",
-        name: `How fast can a Painter Melbourne crew reach ${suburb} from your Mitcham HQ?`,
+        name: `How fast can a Painter Melbourne crew reach ${suburb} from your Mitcham Office?`,
         acceptedAnswer: {
           "@type": "Answer",
           text: `Strategically based in Mitcham, our teams provide rapid coverage across Greater Melbourne via the EastLink and Monash corridors. ${suburb} sites typically receive an on-site survey within 24 hours of enquiry. Our decentralised crew model ensures on-time starts at 7:00 AM sharp, regardless of your suburb. Crews are 100% in-house, never subcontracted, never re-routed.`,

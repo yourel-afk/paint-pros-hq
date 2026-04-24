@@ -33,7 +33,7 @@ export function PricingTiers() {
     <div>
       <Eyebrow>Transparent Investment</Eyebrow>
       <h2 className="text-4xl lg:text-5xl font-bold max-w-2xl">
-        What a Mitcham HQ project actually costs.
+        What a Mitcham Office project actually costs.
       </h2>
       <p className="mt-6 text-foreground/70 max-w-2xl">
         Indicative ranges for high-end Melbourne residential. Every quote is fixed-price after a senior master painter site visit. No variations, no surprises.

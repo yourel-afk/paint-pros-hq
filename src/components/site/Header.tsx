@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-3 lg:px-12">
-        <Link to="/" className="flex min-h-11 items-center" aria-label="Painter Melbourne — Mitcham HQ Home">
+        <Link to="/" className="flex min-h-11 items-center" aria-label="Painter Melbourne — Mitcham Office Home">
           <Logo />
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
@@ -92,7 +92,7 @@ export function Header() {
           <a
             href={BUSINESS.phoneHref}
             className="label-caps text-foreground/80 hover:text-gold inline-flex items-center gap-2 min-h-11"
-            aria-label={`Call Painter Melbourne Mitcham HQ on ${BUSINESS.phoneDisplay}`}
+            aria-label={`Call Painter Melbourne Mitcham Office on ${BUSINESS.phoneDisplay}`}
           >
             <Phone className="h-4 w-4" /> {BUSINESS.phoneDisplay}
           </a>
@@ -101,7 +101,7 @@ export function Header() {
             className="inline-flex items-center justify-center min-h-11 px-6 py-3 label-caps text-gold-foreground hover:bg-foreground transition-colors"
             style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
           >
-            Get a Mitcham HQ Quote
+            Get a Mitcham Office Quote
           </Link>
         </div>
         <button
@@ -174,7 +174,7 @@ export function Header() {
               className="mt-3 inline-flex items-center justify-center min-h-12 px-6 py-3 label-caps text-gold-foreground"
               style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
             >
-              Get a Mitcham HQ Quote
+              Get a Mitcham Office Quote
             </Link>
           </div>
         </div>

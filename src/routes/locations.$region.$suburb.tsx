@@ -109,7 +109,7 @@ function SuburbPage() {
           <img
             src={region.image}
             alt={`Residential painting in ${suburb}, Melbourne — Painter Melbourne`}
-            title={`Professional painting results in ${suburb} — Mitcham HQ Specialists`}
+            title={`Professional painting results in ${suburb} — Mitcham Office Specialists`}
             className="w-full h-full object-cover opacity-45"
             width={1600}
             height={1000}
@@ -142,7 +142,7 @@ function SuburbPage() {
               className="inline-flex bg-gold px-8 py-4 label-caps"
               style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
             >
-              Get a Mitcham HQ Quote
+              Get a Mitcham Office Quote
             </Link>
             <Link
               to="/three-stage"

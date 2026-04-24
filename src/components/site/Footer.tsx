@@ -12,12 +12,12 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo />
             <p className="mt-6 text-sm text-foreground/70 max-w-sm leading-relaxed">
-              High-end residential master painters serving 93 Melbourne suburbs from our Mitcham HQ. 100% in-house crews. Zero subcontractors.
+              High-end residential master painters serving 93 Melbourne suburbs from our Mitcham Office. 100% in-house crews. Zero subcontractors.
             </p>
             <address className="mt-6 not-italic space-y-3 text-sm text-foreground/75">
               <div className="flex items-start gap-3 min-h-11">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" style={{ color: "var(--gold)" }} />
-                <span>Mitcham HQ · {BUSINESS.locality}, {BUSINESS.region} {BUSINESS.postcode}</span>
+                <span>Mitcham Office · {BUSINESS.locality}, {BUSINESS.region} {BUSINESS.postcode}</span>
               </div>
               <a href={BUSINESS.phoneHref} className="flex items-center gap-3 min-h-11 hover:text-gold transition-colors">
                 <Phone className="h-4 w-4 shrink-0" style={{ color: "var(--gold)" }} />

@@ -15,8 +15,8 @@ export function MitchamFlagship() {
         <div className="absolute inset-0">
           <img
             src={easternImg}
-            alt="Painter Melbourne Mitcham HQ headquarters — high-end residential master painting in Mitcham, Melbourne"
-            title="Mitcham HQ — Painter Melbourne Headquarters"
+            alt="Painter Melbourne Mitcham Office headquarters — high-end residential master painting in Mitcham, Melbourne"
+            title="Mitcham Office — Painter Melbourne Headquarters"
             className="w-full h-full object-cover opacity-40"
             width={1600}
             height={1000}
@@ -29,7 +29,7 @@ export function MitchamFlagship() {
             <span>/</span>
             <Link to="/locations/$region" params={{ region: "eastern-hills" }} className="min-h-11 inline-flex items-center">Eastern & Hills</Link>
             <span>/</span>
-            <span className="text-foreground/85">Mitcham · HQ</span>
+            <span className="text-foreground/85">Mitcham · Office</span>
           </nav>
           <div className="inline-flex items-center gap-2 border border-[var(--gold)] px-3 py-1.5 label-caps mb-6" style={{ color: "var(--gold)" }}>
             <Building2 className="h-3.5 w-3.5" /> The Painter Melbourne Headquarters
@@ -48,7 +48,7 @@ export function MitchamFlagship() {
               className="inline-flex items-center justify-center min-h-12 px-8 py-4 label-caps"
               style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
             >
-              Get a Mitcham HQ Quote
+              Get a Mitcham Office Quote
             </Link>
             <a
               href={BUSINESS.phoneHref}
@@ -66,7 +66,7 @@ export function MitchamFlagship() {
       <Section>
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <Eyebrow>The Logistical Heart · Mitcham HQ</Eyebrow>
+            <Eyebrow>The Logistical Heart · Mitcham Office</Eyebrow>
             <h2 className="text-3xl lg:text-5xl font-bold">
               Why a permanent Mitcham depot changes the standard.
             </h2>

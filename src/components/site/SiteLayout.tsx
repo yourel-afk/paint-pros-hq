@@ -37,7 +37,7 @@ export function Eyebrow({ children }: { children: ReactNode }) {
 
 export function CTABlock({
   title = "Secure Your Property's Finish",
-  subtitle = "Every project begins with a Mitcham HQ site visit. No subcontractors. No shortcuts.",
+  subtitle = "Every project begins with a Mitcham Office site visit. No subcontractors. No shortcuts.",
 }: {
   title?: string;
   subtitle?: string;
@@ -55,12 +55,12 @@ export function CTABlock({
             className="inline-flex items-center justify-center min-h-12 px-8 py-4 label-caps"
             style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
           >
-            Get a Mitcham HQ Quote
+            Get a Mitcham Office Quote
           </a>
           <a
             href={BUSINESS.phoneHref}
             className="inline-flex items-center justify-center min-h-11 px-6 label-caps text-foreground/85 hover:text-gold"
-            aria-label={`Call Mitcham HQ on ${BUSINESS.phoneDisplay}`}
+            aria-label={`Call Mitcham Office on ${BUSINESS.phoneDisplay}`}
           >
             or call {BUSINESS.phoneDisplay}
           </a>

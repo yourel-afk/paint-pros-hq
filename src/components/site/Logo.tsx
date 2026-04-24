@@ -5,7 +5,7 @@ export function Logo({ size = 40 }: { size?: number }) {
     <div className="flex items-center gap-3">
       <img
         src={logo}
-        alt="Painter Melbourne — Mitcham HQ"
+        alt="Painter Melbourne — Mitcham Office"
         width={size}
         height={size}
         className="block"
@@ -16,7 +16,7 @@ export function Logo({ size = 40 }: { size?: number }) {
           PAINTER MELBOURNE
         </span>
         <span className="label-caps text-gold mt-1" style={{ color: "var(--gold)" }}>
-          Mitcham HQ · Est. Masterworks
+          Mitcham Office · Est. Masterworks
         </span>
       </div>
     </div>

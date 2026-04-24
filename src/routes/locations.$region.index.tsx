@@ -63,7 +63,7 @@ function RegionPage() {
           <img
             src={region.image}
             alt={`${region.name} Melbourne residential painting — ${region.specialty}`}
-            title={`Professional painting in ${region.name} — Mitcham HQ specialists`}
+            title={`Professional painting in ${region.name} — Mitcham Office specialists`}
             className="w-full h-full object-cover opacity-50"
             width={1600}
             height={1000}
