@@ -58,6 +58,39 @@ export function localBusinessSchema() {
       "@type": "City",
       name: `${suburb}, Melbourne, VIC`,
     })),
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Painter Melbourne Core Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            "@id": `${BUSINESS.url}/services#interior`,
+            name: "Interior Painting",
+            serviceType: "Interior Residential Painting",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            "@id": `${BUSINESS.url}/services#exterior`,
+            name: "Exterior Painting",
+            serviceType: "Exterior Residential Painting",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            "@id": `${BUSINESS.url}/services#epoxy`,
+            name: "Epoxy Flooring",
+            serviceType: "Epoxy Floor Coatings",
+          },
+        },
+      ],
+    },
     sameAs: [],
   };
 }

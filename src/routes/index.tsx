@@ -3,6 +3,7 @@ import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLa
 import { TrustBar } from "@/components/site/TrustBar";
 import { ThreeStage } from "@/components/site/ThreeStage";
 import { PricingTiers } from "@/components/site/PricingTiers";
+import { RecentTransformations } from "@/components/site/RecentTransformations";
 import { REGIONS } from "@/data/suburbs";
 import { BUSINESS } from "@/data/business";
 import heroImg from "@/assets/hero-mansion.jpg";
@@ -81,6 +82,11 @@ function Index() {
       </div>
 
       <TrustBar />
+
+      {/* RECENT TRANSFORMATIONS — Hyper-local proof of work */}
+      <Section>
+        <RecentTransformations />
+      </Section>
 
       <Section>
         <ThreeStage />
