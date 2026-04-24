@@ -7,7 +7,7 @@ const TIERS = [
     range: "$8,400 – $18,500",
     scope: "Full interior repaint · 3-bed home",
     features: [
-      "Diagnostic prep & moisture mapping",
+      "The Grunt Work prep & moisture mapping",
       "Two-coat premium Dulux system",
       "100-point handover inspection",
       "10-year workmanship guarantee",
