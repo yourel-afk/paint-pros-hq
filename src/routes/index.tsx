@@ -90,7 +90,7 @@ function Index() {
       <Section className="border-t border-white/10">
         <Eyebrow>The 93-Suburb Service Map</Eyebrow>
         <h2 className="text-4xl lg:text-6xl font-bold max-w-3xl">
-          One HQ. Four corridors. Ninety-three Melbourne suburbs.
+          One Office. Four corridors. Ninety-three Melbourne suburbs.
         </h2>
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
           {REGIONS.map((r) => (

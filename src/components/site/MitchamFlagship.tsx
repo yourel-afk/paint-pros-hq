@@ -37,7 +37,7 @@ export function MitchamFlagship() {
           <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight max-w-4xl">
             Master House Painters in <span style={{ color: "var(--gold)" }}>Mitcham</span>
             <br />
-            <span className="text-foreground/85 text-3xl lg:text-5xl font-bold">You're not visiting a service area. You're at our HQ.</span>
+            <span className="text-foreground/85 text-3xl lg:text-5xl font-bold">You're not visiting a service area. You're at our Mitcham Office.</span>
           </h1>
           <p className="mt-8 text-lg lg:text-xl text-foreground/85 max-w-2xl">
             Mitcham isn't a satellite suburb on a service map. It's the purpose-built headquarters that anchors every Painter Melbourne crew. When you book a Mitcham project, you get the closest, fastest, most senior master painters we have.
@@ -87,7 +87,7 @@ export function MitchamFlagship() {
               <div className="flex items-start gap-4">
                 <Building2 className="h-8 w-8 shrink-0" style={{ color: "var(--gold)" }} />
                 <div>
-                  <div className="label-caps mb-2" style={{ color: "var(--gold)" }}>HQ Address</div>
+                  <div className="label-caps mb-2" style={{ color: "var(--gold)" }}>Office Address</div>
                   <div className="text-foreground text-lg">{BUSINESS.street}</div>
                   <div className="text-foreground/75">{BUSINESS.locality}, {BUSINESS.region} {BUSINESS.postcode}</div>
                   <a href={BUSINESS.phoneHref} className="mt-4 inline-flex items-center gap-2 label-caps min-h-11" style={{ color: "var(--gold)" }}>
