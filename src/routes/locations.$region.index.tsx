@@ -112,7 +112,7 @@ function RegionPage() {
           ))}
         </div>
         <div className="mt-16">
-          <MitchamLogistics suburb={region.name} />
+          <MitchamLogistics suburb={region.name} region={region.name} />
         </div>
         <CTABlock />
       </Section>
