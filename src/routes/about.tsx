@@ -47,7 +47,7 @@ function AboutPage() {
             <div className="label-caps mb-6" style={{ color: "var(--gold)" }}>By The Numbers</div>
             <dl className="space-y-6">
               {[
-                ["93", "Melbourne suburbs serviced"],
+                ["97", "Melbourne suburbs serviced"],
                 ["10 yr", "Masterpiece Guarantee"],
                 ["100%", "In-house master painters"],
                 ["0", "Subcontractors. Ever."],

@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 /**
  * Curated 12 primary service hubs surfaced in the footer matrix.
- * Keeps the footer feeling editorial rather than spammy. Full 93-suburb
+ * Keeps the footer feeling editorial rather than spammy. Full 97-suburb
  * list lives on the dedicated /locations directory page.
  */
 const PRIMARY_HUBS = [
@@ -32,7 +32,7 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo />
             <p className="mt-6 text-sm text-foreground/70 max-w-sm leading-relaxed">
-              High-end residential master painters serving 93 Melbourne suburbs from our Mitcham Office. 100% in-house crews. Zero subcontractors.
+              High-end residential master painters serving 97 Melbourne suburbs from our Mitcham Office. 100% in-house crews. Zero subcontractors.
             </p>
             <address className="mt-6 not-italic space-y-3 text-sm text-foreground/75">
               <div className="flex items-start gap-3 min-h-11">
@@ -92,7 +92,7 @@ export function Footer() {
                 className="label-caps inline-flex items-center gap-2 min-h-11 hover:opacity-80 transition-opacity"
                 style={{ color: "var(--gold)" }}
               >
-                View all 93 Melbourne suburbs we serve →
+                View all 97 Melbourne suburbs we serve →
               </Link>
             </div>
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">

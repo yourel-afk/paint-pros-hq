@@ -31,7 +31,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Painter Melbourne | High-End Residential Master Painters" },
-      { name: "description", content: "High-end residential master painters serving 93 Melbourne suburbs from our Mitcham Office. 100% in-house crews. 10-year masterpiece guarantee." },
+      { name: "description", content: "High-end residential master painters serving 97 Melbourne suburbs from our Mitcham Office. 100% in-house crews. 10-year masterpiece guarantee." },
       { name: "author", content: "Painter Melbourne" },
       { name: "robots", content: "index, follow" },
       { name: "theme-color", content: "#131313" },

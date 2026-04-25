@@ -3,7 +3,7 @@ import type { Region } from "@/data/suburbs";
 
 /**
  * Region-specific deep-dive module injected into every suburb page.
- * Hammers the local technical narrative so each of the 93 pages reads
+ * Hammers the local technical narrative so each of the 97 pages reads
  * hyper-local rather than templated.
  */
 export function RegionalSpecialty({ region, suburb }: { region: Region; suburb: string }) {

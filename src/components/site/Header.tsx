@@ -57,7 +57,7 @@ export function Header() {
                     to="/locations"
                     className="block px-5 py-3 label-caps text-foreground/85 hover:bg-[oklch(0.18_0_0)] hover:text-gold border-b border-white/10"
                   >
-                    All 93 Suburbs →
+                    All 97 Suburbs →
                   </Link>
                   {REGIONS.map((r) => (
                     <Link
@@ -135,7 +135,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="label-caps text-foreground/85 flex items-center min-h-12 border-b border-white/5"
             >
-              Locations · All 93 Suburbs
+              Locations · All 97 Suburbs
             </Link>
             <div className="grid grid-cols-2 gap-2 py-2 border-b border-white/5">
               {REGIONS.map((r) => (

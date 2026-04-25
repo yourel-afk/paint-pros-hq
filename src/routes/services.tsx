@@ -123,7 +123,7 @@ function ServicesPage() {
           The same crew, on the ground in <span style={{ color: "var(--gold)" }}>your suburb.</span>
         </h2>
         <p className="mt-4 text-foreground/70 max-w-2xl">
-          Featured interior and exterior repaints from across the 93-suburb service map. Each one signed off by a Painter Melbourne master painter.
+          Featured interior and exterior repaints from across the 97-suburb service map. Each one signed off by a Painter Melbourne master painter.
         </p>
         <div className="mt-12 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3 border border-white/10">
           {FEATURED_LOCAL_PROJECTS.map((p) => {
