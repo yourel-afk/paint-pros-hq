@@ -49,7 +49,7 @@ export const REGIONS: Region[] = [
     tagline: "Modern Estate Finishes",
     specialty: "Contemporary render & feature-wall execution",
     narrative:
-      "The South-East corridor is Melbourne's premium new-build belt. UV-reflective coatings on dark estate facades, modern render protection on contemporary builds, and industrial-grade epoxy floors in every double garage. Two-storey homes, large-format spray and back-roll, every coat to spec.",
+      "The South-East corridor is Melbourne's premium new-build belt. UV-reflective coatings on dark estate facades, modern render protection on contemporary builds, and full interior repaints by the same in-house crew. Two-storey homes, large-format spray and back-roll, every coat to spec.",
     image: segrowthImg,
     suburbs: [
       "Springvale","Noble Park","Keysborough","Dandenong","Dandenong North","Dandenong South",
