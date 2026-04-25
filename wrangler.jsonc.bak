@@ -5,3 +5,8 @@
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry"
 }
+{
+  "name": "paint-pros-hq",
+  "pages_build_output_dir": "./dist",
+  // ... rest of your config
+}
