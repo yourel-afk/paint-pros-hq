@@ -23,7 +23,7 @@ const GEO_MITCHAM = {
 /**
  * Site-wide LocalBusiness schema. Hard-coded for the Mitcham Office.
  * Includes every serviced suburb in `areaServed` so Google can map the
- * full 93-suburb service polygon to one canonical legal entity.
+ * full 97-suburb service polygon to one canonical legal entity.
  */
 export function localBusinessSchema() {
   return {

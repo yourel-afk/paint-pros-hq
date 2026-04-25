@@ -26,8 +26,8 @@ export const REGIONS: Region[] = [
     image: baysideImg,
     suburbs: [
       "St Kilda","Brighton","Hampton","Sandringham","Black Rock","Beaumaris",
-      "Mentone","Parkdale","Mordialloc","Aspendale","Aspendale Gardens","Edithvale",
-      "Chelsea","Chelsea Heights","Bonbeach","Carrum","Seaford",
+      "Cheltenham","Mentone","Parkdale","Mordialloc","Aspendale","Aspendale Gardens","Edithvale",
+      "Chelsea","Chelsea Heights","Bonbeach","Carrum","Seaford","Frankston",
     ],
   },
   {
@@ -69,11 +69,11 @@ export const REGIONS: Region[] = [
     suburbs: [
       "Mitcham","Vermont","Vermont South","Nunawading","Blackburn","Blackburn North","Blackburn South",
       "Forest Hill","Burwood","Burwood East","Box Hill","Box Hill North","Box Hill South",
-      "Mont Albert","Surrey Hills","Canterbury","Balwyn","Balwyn North","Doncaster","Doncaster East",
+      "Mont Albert","Surrey Hills","Canterbury","Camberwell","Balwyn","Balwyn North","Doncaster","Doncaster East",
       "Templestowe","Templestowe Lower","Bulleen","Donvale","Park Orchards","Warrandyte",
       "Wonga Park","Ringwood","Ringwood East","Ringwood North","Heathmont","Bayswater",
       "Bayswater North","Croydon","Croydon Hills","Croydon North","Croydon South",
-      "Kilsyth","Mooroolbark","Lilydale","Chirnside Park","Glen Waverley","Wantirna",
+      "Kilsyth","Mooroolbark","Lilydale","Chirnside Park","Glen Waverley","Mount Waverley","Wantirna",
     ],
   },
 ];

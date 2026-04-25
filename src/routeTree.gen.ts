@@ -16,6 +16,8 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LocationsIndexRouteImport } from './routes/locations.index'
+import { Route as ServicesInteriorRouteImport } from './routes/services.interior'
+import { Route as ServicesExteriorRouteImport } from './routes/services.exterior'
 import { Route as LocationsRegionIndexRouteImport } from './routes/locations.$region.index'
 import { Route as LocationsRegionSuburbRouteImport } from './routes/locations.$region.$suburb'
 
@@ -54,6 +56,16 @@ const LocationsIndexRoute = LocationsIndexRouteImport.update({
   path: '/locations/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesInteriorRoute = ServicesInteriorRouteImport.update({
+  id: '/interior',
+  path: '/interior',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesExteriorRoute = ServicesExteriorRouteImport.update({
+  id: '/exterior',
+  path: '/exterior',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const LocationsRegionIndexRoute = LocationsRegionIndexRouteImport.update({
   id: '/locations/$region/',
   path: '/locations/$region/',
@@ -70,8 +82,10 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/three-stage': typeof ThreeStageRoute
+  '/services/exterior': typeof ServicesExteriorRoute
+  '/services/interior': typeof ServicesInteriorRoute
   '/locations/': typeof LocationsIndexRoute
   '/locations/$region/$suburb': typeof LocationsRegionSuburbRoute
   '/locations/$region/': typeof LocationsRegionIndexRoute
@@ -81,8 +95,10 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/three-stage': typeof ThreeStageRoute
+  '/services/exterior': typeof ServicesExteriorRoute
+  '/services/interior': typeof ServicesInteriorRoute
   '/locations': typeof LocationsIndexRoute
   '/locations/$region/$suburb': typeof LocationsRegionSuburbRoute
   '/locations/$region': typeof LocationsRegionIndexRoute
@@ -93,8 +109,10 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
   '/three-stage': typeof ThreeStageRoute
+  '/services/exterior': typeof ServicesExteriorRoute
+  '/services/interior': typeof ServicesInteriorRoute
   '/locations/': typeof LocationsIndexRoute
   '/locations/$region/$suburb': typeof LocationsRegionSuburbRoute
   '/locations/$region/': typeof LocationsRegionIndexRoute
@@ -108,6 +126,8 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/services'
     | '/three-stage'
+    | '/services/exterior'
+    | '/services/interior'
     | '/locations/'
     | '/locations/$region/$suburb'
     | '/locations/$region/'
@@ -119,6 +139,8 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/services'
     | '/three-stage'
+    | '/services/exterior'
+    | '/services/interior'
     | '/locations'
     | '/locations/$region/$suburb'
     | '/locations/$region'
@@ -130,6 +152,8 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/services'
     | '/three-stage'
+    | '/services/exterior'
+    | '/services/interior'
     | '/locations/'
     | '/locations/$region/$suburb'
     | '/locations/$region/'
@@ -140,7 +164,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
   ThreeStageRoute: typeof ThreeStageRoute
   LocationsIndexRoute: typeof LocationsIndexRoute
   LocationsRegionSuburbRoute: typeof LocationsRegionSuburbRoute
@@ -198,6 +222,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/interior': {
+      id: '/services/interior'
+      path: '/interior'
+      fullPath: '/services/interior'
+      preLoaderRoute: typeof ServicesInteriorRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/exterior': {
+      id: '/services/exterior'
+      path: '/exterior'
+      fullPath: '/services/exterior'
+      preLoaderRoute: typeof ServicesExteriorRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/locations/$region/': {
       id: '/locations/$region/'
       path: '/locations/$region'
@@ -215,12 +253,26 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface ServicesRouteChildren {
+  ServicesExteriorRoute: typeof ServicesExteriorRoute
+  ServicesInteriorRoute: typeof ServicesInteriorRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesExteriorRoute: ServicesExteriorRoute,
+  ServicesInteriorRoute: ServicesInteriorRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
   ThreeStageRoute: ThreeStageRoute,
   LocationsIndexRoute: LocationsIndexRoute,
   LocationsRegionSuburbRoute: LocationsRegionSuburbRoute,

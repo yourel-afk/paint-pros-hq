@@ -10,10 +10,10 @@ export const Route = createFileRoute("/contact")({
       { title: "Get a Mitcham Office Quote | Painter Melbourne" },
       {
         name: "description",
-        content: "Request a fixed-price quote from Painter Melbourne's Mitcham Office. Serving 93 high-end residential suburbs across Melbourne.",
+        content: "Request a fixed-price quote from Painter Melbourne's Mitcham Office. Serving 97 high-end residential suburbs across Melbourne.",
       },
       { property: "og:title", content: "Contact Painter Melbourne | Mitcham-Based Master Painters" },
-      { property: "og:description", content: "Request your fixed-price quote. 93 Melbourne suburbs covered." },
+      { property: "og:description", content: "Request your fixed-price quote. 97 Melbourne suburbs covered." },
     ],
     links: [{ rel: "canonical", href: `${BUSINESS.url}/contact` }],
   }),
