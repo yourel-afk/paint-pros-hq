@@ -11,7 +11,7 @@ export const Route = createFileRoute("/gallery")({
       {
         name: "description",
         content:
-          "Recent residential painting transformations across Melbourne. Heritage restorations, coastal facades, modern estates and industrial epoxy floors, all by our in-house Mitcham Office crew.",
+          "Recent residential painting transformations across Melbourne. Heritage restorations, coastal facades and modern estate repaints, all by our in-house Mitcham Office crew.",
       },
       { property: "og:title", content: "Project Gallery | Painter Melbourne" },
       {
