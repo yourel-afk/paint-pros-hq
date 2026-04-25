@@ -21,7 +21,7 @@ const GEO_MITCHAM = {
 } as const;
 
 /**
- * Site-wide LocalBusiness schema — hard-coded for the Mitcham Office.
+ * Site-wide LocalBusiness schema. Hard-coded for the Mitcham Office.
  * Includes every serviced suburb in `areaServed` so Google can map the
  * full 93-suburb service polygon to one canonical legal entity.
  */
@@ -80,15 +80,6 @@ export function localBusinessSchema() {
             serviceType: "Exterior Residential Painting",
           },
         },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            "@id": `${BUSINESS.url}/services#epoxy`,
-            name: "Epoxy Flooring",
-            serviceType: "Epoxy Floor Coatings",
-          },
-        },
       ],
     },
     sameAs: [],
@@ -96,8 +87,8 @@ export function localBusinessSchema() {
 }
 
 /**
- * Bundled Service schema for the three core service lines (Interior /
- * Exterior / Epoxy). Lives at the root so every page declares the full
+ * Bundled Service schema for the two core service lines (Interior and
+ * Exterior Painting). Lives at the root so every page declares the full
  * service catalogue alongside the LocalBusiness.
  */
 export function servicesCatalogueSchema() {
@@ -139,24 +130,13 @@ export function servicesCatalogueSchema() {
         areaServed: baseAreaServed,
         url: `${BUSINESS.url}/services`,
       },
-      {
-        "@type": "Service",
-        "@id": `${BUSINESS.url}/services#epoxy`,
-        serviceType: "Epoxy Floor Coatings",
-        name: "Epoxy Floors | Garage, Workshop & Wet-Area Systems",
-        description:
-          "High-build epoxy and polyaspartic floor systems for residential garages, workshops and wet areas. Slip-rated, chemical-resistant, decade-grade durability.",
-        provider,
-        areaServed: baseAreaServed,
-        url: `${BUSINESS.url}/services`,
-      },
     ],
   };
 }
 
 /**
- * Per-suburb FAQPage schema — three questions hammering the Coastal
- * Defense / Mitcham Logistics narrative for GEO + featured-snippet wins.
+ * Per-suburb FAQPage schema. Three questions hammering the Coastal
+ * Defense and Mitcham Logistics narrative for GEO and featured-snippet wins.
  */
 export function suburbFaqSchema(suburb: string, regionName: string, regionTagline: string) {
   const isCoastal = regionTagline.toLowerCase().includes("coastal");
@@ -189,7 +169,7 @@ export function suburbFaqSchema(suburb: string, regionName: string, regionTaglin
         name: `Is the 10-Year Masterpiece Guarantee valid on every ${suburb} project?`,
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Yes. Every project in ${suburb}, whether interior, exterior or epoxy, is signed off by a senior Painter Melbourne master painter and backed by our full 10-Year Masterpiece Guarantee. Crews are 100% in-house. Zero subcontractors.`,
+          text: `Yes. Every project in ${suburb}, interior or exterior, is signed off by a senior Painter Melbourne master painter and backed by our full 10-Year Masterpiece Guarantee. Crews are 100% in-house. Zero subcontractors.`,
         },
       },
     ],
