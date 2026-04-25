@@ -90,6 +90,21 @@ function ServicesPage() {
         <p className="mt-8 text-lg text-foreground/85 max-w-3xl leading-relaxed">
           We don't just paint your house. We restore the surface first, then we paint it. Every service below is delivered by Painter Melbourne employees, with the climate-correct system already specced for your property. <span className="text-foreground">No subbies. No shortcuts.</span>
         </p>
+        <div className="mt-10 flex flex-wrap gap-4">
+          <Link
+            to="/services/interior"
+            className="inline-flex items-center gap-2 px-8 py-4 label-caps"
+            style={{ backgroundColor: "var(--gold)", color: "var(--gold-foreground)" }}
+          >
+            Interior Painting <ArrowUpRight className="h-4 w-4" />
+          </Link>
+          <Link
+            to="/services/exterior"
+            className="inline-flex items-center gap-2 border border-foreground/40 px-8 py-4 label-caps hover:bg-foreground hover:text-background transition-colors"
+          >
+            Exterior Painting <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
       </Section>
 
       <TrustBar />
