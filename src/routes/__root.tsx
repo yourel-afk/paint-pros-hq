@@ -31,7 +31,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Painter Melbourne | High-End Residential Master Painters" },
-      { name: "description", content: "High-end residential master painters serving 97 Melbourne suburbs from our Mitcham Office. 100% in-house crews. 10-year masterpiece guarantee." },
+      { name: "description", content: "residential master painters" },
       { name: "author", content: "Painter Melbourne" },
       { name: "robots", content: "index, follow" },
       { name: "theme-color", content: "#131313" },
@@ -39,6 +39,12 @@ export const Route = createRootRoute({
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_AU" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Painter Melbourne | High-End Residential Master Painters" },
+      { name: "twitter:title", content: "Painter Melbourne | High-End Residential Master Painters" },
+      { property: "og:description", content: "residential master painters" },
+      { name: "twitter:description", content: "residential master painters" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a1ef80ec-b660-4d39-a72c-74b14c8610b4/id-preview-58ea08ee--5864e02b-17ac-4e12-9651-8000d74dec38.lovable.app-1777084528883.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a1ef80ec-b660-4d39-a72c-74b14c8610b4/id-preview-58ea08ee--5864e02b-17ac-4e12-9651-8000d74dec38.lovable.app-1777084528883.png" },
     ],
     links: [
       {
