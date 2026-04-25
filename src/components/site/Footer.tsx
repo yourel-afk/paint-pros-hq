@@ -9,20 +9,25 @@ import { Phone, Mail, MapPin } from "lucide-react";
  * Keeps the footer feeling editorial rather than spammy. Full 97-suburb
  * list lives on the dedicated /locations directory page.
  */
-const PRIMARY_HUBS = [
-  "Mitcham",
-  "Glen Waverley",
-  "Box Hill",
-  "Ringwood",
-  "Balwyn",
-  "Brighton",
-  "St Kilda",
-  "Hampton",
-  "Mentone",
-  "Elwood",
-  "Bentleigh",
-  "Berwick",
-] as const;
+/**
+ * Each entry pairs the hub suburb with a varied, hyper-local SEO anchor.
+ * Anchor text is intentionally non-uniform to avoid templated link-spam
+ * patterns and to spread keyword authority across the suburb network.
+ */
+const PRIMARY_HUBS: { suburb: string; anchor: string }[] = [
+  { suburb: "Mitcham", anchor: "Painters in Mitcham" },
+  { suburb: "St Kilda", anchor: "St Kilda House Painters" },
+  { suburb: "Brighton", anchor: "Brighton Exterior Restorations" },
+  { suburb: "Berwick", anchor: "Professional Painting in Berwick" },
+  { suburb: "Glen Waverley", anchor: "Glen Waverley Master Painters" },
+  { suburb: "Frankston", anchor: "Painting Specialists Frankston" },
+  { suburb: "Camberwell", anchor: "Heritage Painters Camberwell" },
+  { suburb: "Doncaster", anchor: "Doncaster Residential Painting" },
+  { suburb: "Mount Waverley", anchor: "Mount Waverley Interior Specialists" },
+  { suburb: "Cheltenham", anchor: "Cheltenham Exterior Painting" },
+  { suburb: "Bentleigh", anchor: "Bentleigh Period Restoration" },
+  { suburb: "Box Hill", anchor: "Box Hill House Painters" },
+];
 
 export function Footer() {
   return (
@@ -71,17 +76,17 @@ export function Footer() {
               Areas We Serve
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-2">
-              {PRIMARY_HUBS.map((s) => {
-                const found = findSuburb(slugify(s));
+              {PRIMARY_HUBS.map(({ suburb, anchor }) => {
+                const found = findSuburb(slugify(suburb));
                 if (!found) return null;
                 return (
                   <Link
-                    key={s}
+                    key={suburb}
                     to="/locations/$region/$suburb"
-                    params={{ region: found.region.id, suburb: slugify(s) }}
+                    params={{ region: found.region.id, suburb: slugify(suburb) }}
                     className="text-sm text-foreground/70 hover:text-gold transition-colors flex items-center min-h-9 py-1"
                   >
-                    {s}
+                    {anchor}
                   </Link>
                 );
               })}
