@@ -3,7 +3,6 @@ import { ArrowUpRight } from "lucide-react";
 import { Eyebrow } from "./SiteLayout";
 import federationImg from "@/assets/project-federation.jpg";
 import baysideImg from "@/assets/project-bayside.jpg";
-import epoxyImg from "@/assets/project-epoxy.jpg";
 import modernImg from "@/assets/project-modern.jpg";
 import interiorImg from "@/assets/project-interior.jpg";
 import heritageImg from "@/assets/project-heritage.jpg";
@@ -18,11 +17,6 @@ const PROJECTS = [
     image: baysideImg,
     title: "Coastal Defense Repaint in Brighton",
     body: "Salt-spray exposed render rebuilt with marine-grade elastomeric membrane. UV-stable topcoat engineered for Port Phillip's prevailing weather.",
-  },
-  {
-    image: epoxyImg,
-    title: "High-Gloss Epoxy in Berwick",
-    body: "Industrial-grade flake epoxy floor system over a moisture-tested slab. Slip-rated, chemical resistant, decade-grade durability for the daily-driver garage.",
   },
   {
     image: modernImg,

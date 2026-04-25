@@ -10,7 +10,7 @@ import { MapPin, Truck, Building2, Phone } from "lucide-react";
 export function MitchamFlagship() {
   return (
     <SiteLayout>
-      {/* HQ HERO */}
+      {/* OFFICE HERO */}
       <div className="relative border-b border-white/10">
         <div className="absolute inset-0">
           <img
@@ -62,7 +62,7 @@ export function MitchamFlagship() {
 
       <TrustBar />
 
-      {/* HQ NARRATIVE */}
+      {/* OFFICE NARRATIVE */}
       <Section>
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-7">
@@ -72,10 +72,10 @@ export function MitchamFlagship() {
             </h2>
             <div className="mt-8 space-y-5 text-foreground/80 leading-relaxed text-lg">
               <p>
-                Most painting companies operate from a phone number and a ute. Painter Melbourne operates from a permanent, purpose-built depot in Mitcham. Staffed seven days, stocked with climate-specific Dulux systems, and feeding a decentralised crew model that covers Greater Melbourne via the EastLink and Monash corridors.
+                Most painting companies operate from a phone number and a ute. Painter Melbourne operates from a permanent, purpose-built office in Mitcham. Staffed seven days, stocked with climate-specific Dulux systems, and feeding a decentralised crew model that covers Greater Melbourne via the EastLink and Monash corridors.
               </p>
               <p>
-                Strategically based in Mitcham, our teams provide rapid coverage across Greater Melbourne via the EastLink and Monash corridors. Our decentralised crew model ensures on-time starts at 7:00 AM sharp in Mitcham, regardless of your suburb. Site visits are same-week and post-handover service is a ten-minute drive. Not a callback queue.
+                Strategically based at our Mitcham Office, our teams provide rapid coverage via the EastLink and Monash corridors. Our decentralised crew model ensures on-time starts at 7:00 AM sharp, regardless of your suburb. Site visits are same-week and post-handover service is a ten-minute drive, not a callback queue.
               </p>
               <p>
                 Mitcham is also our training ground. Every apprentice serves their first six months under a senior master on local Mitcham, Vermont, and Blackburn projects before being approved for unsupervised work elsewhere. The standard you receive in Mitcham is the standard the rest of Melbourne is measured against.
@@ -100,9 +100,9 @@ export function MitchamFlagship() {
               <div className="flex items-start gap-4">
                 <Truck className="h-8 w-8 shrink-0" style={{ color: "var(--gold)" }} />
                 <div>
-                  <div className="label-caps mb-2" style={{ color: "var(--gold)" }}>Same-Morning Mobilisation</div>
+                  <div className="label-caps mb-2" style={{ color: "var(--gold)" }}>7:00 AM Sharp On-Site</div>
                   <p className="text-foreground/85 leading-relaxed">
-                    Crews are on-site in {BUSINESS.locality} at 7:00 AM sharp. Decentralised dispatch via the EastLink corridor before peak traffic.
+                    Decentralised crew model. EastLink and Monash corridor coverage means crews start at 7:00 AM sharp across Greater Melbourne, regardless of your suburb.
                   </p>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export function MitchamFlagship() {
             </Link>
           ))}
         </div>
-        <CTABlock title="Book your Mitcham master painter. Closest crew, fastest mobilisation." />
+        <CTABlock title="Book your Mitcham master painter. Closest crew, on-time start." />
       </Section>
     </SiteLayout>
   );

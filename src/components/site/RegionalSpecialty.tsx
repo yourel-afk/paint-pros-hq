@@ -85,16 +85,16 @@ function getRegionalContent(regionId: Region["id"], suburb: string): RegionalCon
       return {
         Icon: Building2,
         eyebrow: "Modern Residential Performance",
-        headline: `UV-reflective coatings, modern render protection and industrial epoxy in ${suburb}.`,
+        headline: `UV-reflective coatings and modern render protection in ${suburb}.`,
         paragraphs: [
           `${suburb} is Melbourne's contemporary new-build belt. Large-format render facades, two-storey elevations, dark feature walls and the high sun exposure that comes with treeless estate streetscapes. Heat load on dark render can exceed 70°C in summer, the exact temperature at which standard dark colours fade, chalk and warp the render behind them.`,
           `We specify UV-reflective coatings on every dark elevation. Infrared-reflective pigments drop surface temperatures by 10 to 15 degrees and protect both the colour and the substrate. Modern render gets a dedicated alkali-resistant primer plus two coats of premium acrylic membrane, sealed at every parapet junction and control joint to keep moisture out of the wall system.`,
-          `For the double garage, we lay industrial-grade epoxy. High-build polyaspartic top coats over a moisture-sealed primer, broadcast flake for slip resistance, and a chemical-resistant finish that handles tyre marks, brake fluid and cold-tyre pickup without lifting. Same in-house crew that paints the house finishes the floor.`,
+          `On every ${suburb} project, the same in-house crew handles facade, eaves, fascia and the full interior repaint. Low-VOC enamel systems on every architrave and skirt, brush-cut detail on window reveals, and a three-coat film build on every exterior elevation. No subbies handed the keys halfway through the job.`,
         ],
         specs: [
           { label: "UV-reflective system", value: "IR pigments, 10 to 15 degree surface drop" },
           { label: "Modern render protection", value: "Alkali primer plus two-coat acrylic membrane" },
-          { label: "Garage epoxy", value: "Industrial polyaspartic, slip-rated, chemical-resistant" },
+          { label: "Interior finish", value: "Low-VOC three-coat enamel on trim and joinery" },
         ],
       };
     case "inner-se":
