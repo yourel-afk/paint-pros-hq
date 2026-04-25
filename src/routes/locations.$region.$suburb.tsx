@@ -68,7 +68,7 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
           children: JSON.stringify(
             breadcrumbSchema([
               { name: "Home", url: "/" },
-              { name: "Locations", url: "/locations" },
+              { name: "Service Areas", url: "/locations" },
               { name: region.name, url: `/locations/${region.id}` },
               { name: suburb, url: `/locations/${region.id}/${slugify(suburb)}` },
             ]),
@@ -97,7 +97,7 @@ export const Route = createFileRoute("/locations/$region/$suburb")({
 function SuburbPage() {
   const { region, suburb } = Route.useLoaderData();
   const isHQ = region.id === "eastern-hills" && suburb === "Mitcham";
-  const nearby = nearestNeighbours(region.id, suburb, 5);
+  const nearby = nearestNeighbours(region.id, suburb, 3);
 
   if (isHQ) return <MitchamFlagship />;
 
@@ -121,7 +121,7 @@ function SuburbPage() {
             <Breadcrumbs
               items={[
                 { label: "Home", to: "/" },
-                { label: "Locations", to: "/locations" },
+                { label: "Service Areas", to: "/locations" },
                 { label: region.name, to: "/locations/$region", params: { region: region.id } },
                 { label: suburb },
               ]}
@@ -196,23 +196,23 @@ function SuburbPage() {
 
       {/* Nearby */}
       <Section className="border-t border-white/10">
-        <Eyebrow>Nearby Service Areas</Eyebrow>
+        <Eyebrow>Serving {suburb} & Surrounds</Eyebrow>
         <h2 className="text-3xl lg:text-4xl font-bold">
-          5 closest suburbs to {suburb}
+          The three nearest suburbs to {suburb}
         </h2>
         <p className="mt-4 text-foreground/70 max-w-2xl">
           Same in-house master crew across these neighbouring {region.name} suburbs. Same day, same standard, same 10-Year Masterpiece Guarantee.
         </p>
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-px bg-white/10 border border-white/10">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/10 border border-white/10">
           {nearby.map((s: string) => (
             <Link
               key={s}
               to="/locations/$region/$suburb"
               params={{ region: region.id, suburb: slugify(s) }}
-              className="bg-background p-6 min-h-[88px] hover:bg-[oklch(0.20_0_0)] transition-colors block"
+              className="bg-background p-8 min-h-[88px] hover:bg-[oklch(0.20_0_0)] transition-colors block"
             >
-              <div className="label-caps text-foreground/55">Painter</div>
-              <div className="mt-2 text-lg font-semibold">{s}</div>
+              <div className="label-caps text-foreground/55">Professional Painting in</div>
+              <div className="mt-2 text-xl font-semibold">{s}</div>
             </Link>
           ))}
         </div>

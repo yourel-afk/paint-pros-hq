@@ -1,10 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, Section, Eyebrow, CTABlock } from "@/components/site/SiteLayout";
 import { TrustBar } from "@/components/site/TrustBar";
 import { ThreeStage } from "@/components/site/ThreeStage";
-import { Brush, Home, Building2, Palette, Droplets, Trees } from "lucide-react";
+import { Brush, Home, Building2, Palette, Droplets, Trees, ArrowUpRight } from "lucide-react";
 import { BUSINESS } from "@/data/business";
 import { NoSubbies } from "@/components/site/NoSubbies";
+import { findSuburb, slugify } from "@/data/suburbs";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -65,6 +66,19 @@ const SERVICES = [
   },
 ];
 
+/**
+ * Recent featured local projects with varied anchor text. Drives the
+ * service-to-suburb internal mesh required by the SEO directive.
+ */
+const FEATURED_LOCAL_PROJECTS: { suburb: string; anchor: string; note: string }[] = [
+  { suburb: "Brighton", anchor: "Brighton Exterior Restorations", note: "Coastal Defense membrane on a salt-spray facade" },
+  { suburb: "Mitcham", anchor: "Interior Specialists in Mitcham", note: "Whole-home repaint with Festool dustless prep" },
+  { suburb: "Berwick", anchor: "Professional Painting in Berwick", note: "Two-storey modern render with IR-reflective topcoats" },
+  { suburb: "Elwood", anchor: "Heritage Repaints in Elwood", note: "Edwardian facade restored to National Trust palette" },
+  { suburb: "Glen Waverley", anchor: "Master House Painters Glen Waverley", note: "Federation timber rebuild with lead-safe XRF testing" },
+  { suburb: "Hampton", anchor: "Hampton Exterior Refresh", note: "Bayside weatherboard repaint, marine-grade system" },
+];
+
 function ServicesPage() {
   return (
     <SiteLayout>
@@ -101,6 +115,40 @@ function ServicesPage() {
 
       <Section className="border-t border-white/10">
         <NoSubbies />
+      </Section>
+
+      <Section className="border-t border-white/10">
+        <Eyebrow>Recent Local Projects</Eyebrow>
+        <h2 className="text-4xl lg:text-5xl font-bold max-w-3xl">
+          The same crew, on the ground in <span style={{ color: "var(--gold)" }}>your suburb.</span>
+        </h2>
+        <p className="mt-4 text-foreground/70 max-w-2xl">
+          Featured interior and exterior repaints from across the 93-suburb service map. Each one signed off by a Painter Melbourne master painter.
+        </p>
+        <div className="mt-12 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3 border border-white/10">
+          {FEATURED_LOCAL_PROJECTS.map((p) => {
+            const found = findSuburb(slugify(p.suburb));
+            if (!found) return null;
+            return (
+              <Link
+                key={p.suburb}
+                to="/locations/$region/$suburb"
+                params={{ region: found.region.id, suburb: slugify(p.suburb) }}
+                className="bg-background p-8 hover:bg-[oklch(0.18_0_0)] transition-colors group"
+              >
+                <div className="label-caps text-foreground/55">{found.region.name}</div>
+                <div className="mt-3 flex items-start justify-between gap-3">
+                  <h3 className="text-xl font-semibold leading-snug">{p.anchor}</h3>
+                  <ArrowUpRight
+                    className="h-5 w-5 shrink-0 mt-1 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    style={{ color: "var(--gold)" }}
+                  />
+                </div>
+                <p className="mt-3 text-sm text-foreground/65 leading-relaxed">{p.note}</p>
+              </Link>
+            );
+          })}
+        </div>
       </Section>
 
       <Section className="border-t border-white/10">
